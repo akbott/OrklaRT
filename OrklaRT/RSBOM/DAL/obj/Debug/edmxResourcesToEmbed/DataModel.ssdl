@@ -1,0 +1,1186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="BDCInput">
+    <Key>
+      <PropertyRef Name="BCDInputSeq" />
+    </Key>
+    <Property Name="BCDInputSeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Program" Type="varchar" MaxLength="100" />
+    <Property Name="Dynpro" Type="varchar" MaxLength="10" />
+    <Property Name="ID" Type="varchar" MaxLength="1" />
+    <Property Name="FieldName" Type="varchar" MaxLength="50" />
+    <Property Name="FieldValue" Type="varchar" MaxLength="50" />
+    <Property Name="ScreenInput" Type="int" />
+    <Property Name="TransactionCode" Type="varchar" MaxLength="10" />
+    <Property Name="ValueFieldName" Type="varchar" MaxLength="50" />
+    <Property Name="ReportID" Type="int" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ReportId" Type="int" />
+    <Property Name="Plant" Type="varchar" MaxLength="5" />
+    <Property Name="Material" Type="varchar" MaxLength="10" />
+    <Property Name="MaterialType" Type="varchar" MaxLength="10" />
+    <Property Name="Year" Type="varchar" MaxLength="4" />
+    <Property Name="LanguageKey" Type="varchar" MaxLength="2" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="15" />
+    <Property Name="SalesOrganisation" Type="varchar" MaxLength="10" />
+    <Property Name="PurchasingDocumnet" Type="varchar" MaxLength="20" />
+    <Property Name="SalesOrder" Type="varchar" MaxLength="15" />
+    <Property Name="Delivery" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportMultipleSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="VariantID" Type="int" Nullable="false" />
+    <Property Name="ScreenID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LowValue" Type="varchar" MaxLength="50" />
+    <Property Name="ComboBox" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="VariantID" Type="int" Nullable="false" />
+    <Property Name="ScreenID" Type="varchar" MaxLength="15" />
+    <Property Name="Kind" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Sign" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="SelectionOption" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="LowValue" Type="varchar" MaxLength="50" />
+    <Property Name="HighValue" Type="varchar" MaxLength="50" />
+    <Property Name="MultipleSelection" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportVariants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="VariantID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrentUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastLoggedOn" Type="datetime" Nullable="false" />
+    <Property Name="UserGroup" Type="int" />
+    <Property Name="SAPSystem" Type="varchar" MaxLength="10" />
+    <Property Name="DecimalSeparator" Type="varchar" MaxLength="1" />
+    <Property Name="ThousandSeparator" Type="varchar" MaxLength="1" />
+    <Property Name="DateFormat" Type="varchar" MaxLength="10" />
+    <Property Name="Language" Type="varchar" MaxLength="2" />
+    <Property Name="ProductionPlant" Type="varchar" MaxLength="10" />
+    <Property Name="BwHana" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ExchangeRates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromCurrency" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ExchangeRateType" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ToCurrency" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ValidFrom" Type="date" Nullable="false" />
+    <Property Name="ExchangeRate" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PivotLayouts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="VariantID" Type="int" Nullable="false" />
+    <Property Name="PivotLayout" Type="xml" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PivotLayoutVariants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="VariantName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VariantDescription" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PPLockedOrders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Plant" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OrderNumber" Type="int" />
+    <Property Name="LockedDate" Type="datetime" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductionPlanData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="PlanTime" Type="datetime" />
+    <Property Name="Order" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ConfirmedOrderFinishDate1" Type="date" />
+    <Property Name="ActualFinishDate" Type="date" />
+    <Property Name="ScheduledFinishDate" Type="date" />
+    <Property Name="ScheduledFinishTime" Type="time" Precision="7" />
+    <Property Name="ActualStartDate" Type="date" />
+    <Property Name="ScheduledStartDate" Type="date" />
+    <Property Name="ScheduledStartTime" Type="time" Precision="7" />
+    <Property Name="ActualFinishExecutionDate" Type="date" />
+    <Property Name="ActualStartExecutionDate" Type="date" />
+    <Property Name="DeliveryCompletedIndicator" Type="varchar" MaxLength="10" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="EarliestScheduledStartDate" Type="date" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="MixMaterialDescription" Type="varchar(max)" />
+    <Property Name="LogicalSystem" Type="varchar" MaxLength="15" />
+    <Property Name="PlantDescription" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeletionFlag" Type="varchar" MaxLength="15" />
+    <Property Name="OrderPriority" Type="varchar" MaxLength="10" />
+    <Property Name="ItemCategory" Type="varchar" MaxLength="10" />
+    <Property Name="WorkCenterDescription" Type="varchar" MaxLength="150" />
+    <Property Name="Counter" Type="int" />
+    <Property Name="ResourceObjectID" Type="bigint" />
+    <Property Name="Temp" Type="varchar" MaxLength="15" />
+    <Property Name="EarliestScheduledStartTime" Type="time" Precision="7" />
+    <Property Name="ConfirmedOrderFinishDate" Type="date" />
+    <Property Name="ConfirmedOrderFinishTime" Type="time" Precision="7" />
+    <Property Name="ActualStartTime" Type="time" Precision="7" />
+    <Property Name="ActualStartExecutionTime" Type="time" Precision="7" />
+    <Property Name="ActualFinishTime" Type="time" Precision="7" />
+    <Property Name="CapacityID" Type="varchar" MaxLength="10" />
+    <Property Name="MaterialDescription" Type="varchar(max)" />
+    <Property Name="IndicatorPhase" Type="varchar" MaxLength="15" />
+    <Property Name="LatestScheduledStartDate" Type="date" />
+    <Property Name="LatestScheduledStartTime" Type="time" Precision="7" />
+    <Property Name="ControlKey" Type="varchar" MaxLength="15" />
+    <Property Name="Temp1" Type="varchar" MaxLength="10" />
+    <Property Name="ShortDescription" Type="varchar(max)" />
+    <Property Name="MixUnit" Type="varchar" MaxLength="5" />
+    <Property Name="LanguageCode" Type="varchar" MaxLength="10" />
+    <Property Name="MixMaterial" Type="bigint" Nullable="false" />
+    <Property Name="Plant" Type="varchar" MaxLength="15" />
+    <Property Name="WorkCenter" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="MaterialNumber" Type="bigint" Nullable="false" />
+    <Property Name="BaseQuantity" Type="float" />
+    <Property Name="RequiredMixingQuantity" Type="float" />
+    <Property Name="ConfirmedScrap" Type="int" />
+    <Property Name="ConfirmedYield" Type="int" />
+    <Property Name="ConfirmedYield1" Type="int" />
+    <Property Name="QuantityOfGoodsReceived" Type="int" />
+    <Property Name="ProcessingTime" Type="float" />
+    <Property Name="ScrapQuantity" Type="int" />
+    <Property Name="TotalOrderQuantity" Type="float" Nullable="false" />
+    <Property Name="TotalScrapQuantity" Type="int" Nullable="false" />
+    <Property Name="SetupTime" Type="varchar" MaxLength="50" />
+    <Property Name="OperationQuantity" Type="float" />
+    <Property Name="ConfirmedQuantityYield" Type="int" />
+    <Property Name="TotalStock" Type="float" />
+    <Property Name="QuantityWithdrawn" Type="float" />
+    <Property Name="SetupTid" Type="float" />
+    <Property Name="ProcTid" Type="float" />
+    <Property Name="CMaterialName" Type="varchar(max)" />
+    <Property Name="CRemainingQuantity" Type="float" />
+    <Property Name="CRtTotal" Type="float" />
+    <Property Name="CSetup" Type="float" />
+    <Property Name="CRemainingTime" Type="float" />
+    <Property Name="CSequence" Type="varchar" MaxLength="15" />
+    <Property Name="CStartDateH" Type="date" />
+    <Property Name="CStartTimeH" Type="time" Precision="7" />
+    <Property Name="CActive" Type="varchar" MaxLength="5" />
+    <Property Name="CEndDate" Type="date" />
+    <Property Name="CEndTime" Type="time" Precision="7" />
+    <Property Name="CStart" Type="datetime" />
+    <Property Name="CStop" Type="datetime" />
+    <Property Name="CStartSec" Type="time" Precision="7" />
+    <Property Name="CWorkCenter" Type="varchar(max)" />
+    <Property Name="CStopSec" Type="time" Precision="7" />
+    <Property Name="CAccCap" Type="float" />
+    <Property Name="CStartCap" Type="float" />
+    <Property Name="CAccCap1" Type="float" />
+    <Property Name="CStartValue" Type="float" />
+    <Property Name="CProdValue" Type="float" />
+    <Property Name="CNowValue" Type="float" />
+    <Property Name="CTotalValue" Type="float" />
+    <Property Name="CAktHelp" Type="varchar" MaxLength="10" />
+    <Property Name="CAccAkt" Type="varchar" MaxLength="10" />
+    <Property Name="CAccStarted" Type="varchar" MaxLength="10" />
+    <Property Name="CLocked" Type="varchar" MaxLength="25" />
+    <Property Name="CCapToday" Type="float" />
+    <Property Name="CLeftNow" Type="float" />
+    <Property Name="CCapStart" Type="datetime" />
+    <Property Name="CMixStatus" Type="varchar" MaxLength="25" />
+    <Property Name="CHelp2" Type="float" />
+    <Property Name="CHelp3" Type="float" />
+    <Property Name="CStartDate" Type="date" />
+    <Property Name="CStartTime" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="ReportComments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="CommentID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Comment" Type="varchar(max)" Nullable="false" />
+    <Property Name="Date1" Type="date" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportSubGroupID" Type="int" Nullable="false" />
+    <Property Name="ReportSubGroupName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReportGroup" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.ReportOptions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ReportOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FormatGraph" />
+      <PropertyRef Name="SaveGroup" />
+      <PropertyRef Name="SaveBinTest" />
+      <PropertyRef Name="SaveExcludedTypes" />
+      <PropertyRef Name="UpdateSAP" />
+      <PropertyRef Name="ShowOptions" />
+      <PropertyRef Name="ShelfLifeTypes" />
+      <PropertyRef Name="MaterialsIncluded" />
+      <PropertyRef Name="SaveList" />
+      <PropertyRef Name="SaveManko" />
+      <PropertyRef Name="ShowStocks" />
+      <PropertyRef Name="ShowMD04Data" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="MaterialPrice" Type="bit" Nullable="false" />
+    <Property Name="ProductHierarchy" Type="bit" Nullable="false" />
+    <Property Name="CustomerHierarchy" Type="bit" Nullable="false" />
+    <Property Name="SalesValue" Type="bit" Nullable="false" />
+    <Property Name="QuantityUnit" Type="bit" Nullable="false" />
+    <Property Name="Currency" Type="bit" Nullable="false" />
+    <Property Name="CurrencyYear" Type="bit" Nullable="false" />
+    <Property Name="CreateNewPlan" Type="bit" Nullable="false" />
+    <Property Name="SavePriorities" Type="bit" Nullable="false" />
+    <Property Name="BudgetVersion" Type="bit" Nullable="false" />
+    <Property Name="FormatGraph" Type="bit" Nullable="false" />
+    <Property Name="SaveGroup" Type="bit" Nullable="false" />
+    <Property Name="SaveBinTest" Type="bit" Nullable="false" />
+    <Property Name="SaveExcludedTypes" Type="bit" Nullable="false" />
+    <Property Name="UpdateSAP" Type="bit" Nullable="false" />
+    <Property Name="ShowOptions" Type="bit" Nullable="false" />
+    <Property Name="ShelfLifeTypes" Type="bit" Nullable="false" />
+    <Property Name="MaterialsIncluded" Type="bit" Nullable="false" />
+    <Property Name="SaveList" Type="bit" Nullable="false" />
+    <Property Name="SaveManko" Type="bit" Nullable="false" />
+    <Property Name="ShowStocks" Type="bit" Nullable="false" />
+    <Property Name="ShowMD04Data" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reports">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="ReportName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReportGroup" Type="int" Nullable="false" />
+    <Property Name="ReportDefinition" Type="varbinary(max)" />
+    <Property Name="BeginGroup" Type="bit" Nullable="false" />
+    <Property Name="QueryName" Type="varchar" MaxLength="50" />
+    <Property Name="Week" Type="bit" Nullable="false" />
+    <Property Name="Month" Type="bit" Nullable="false" />
+    <Property Name="Year" Type="bit" Nullable="false" />
+    <Property Name="MultipleSelection" Type="bit" Nullable="false" />
+    <Property Name="MaterialHelp" Type="bit" Nullable="false" />
+    <Property Name="ReportOptions" Type="bit" Nullable="false" />
+    <Property Name="Enabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportSelectionDefaultValues">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="ScreenID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sign" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LowValue" Type="varchar" MaxLength="50" />
+    <Property Name="HighValue" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ReportSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="FieldName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ScreenID" Type="varchar" MaxLength="15" />
+    <Property Name="SelectionOption" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ControlType" Type="varchar" MaxLength="15" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="Mandatory" Type="int" />
+    <Property Name="MultipleSelection" Type="bit" Nullable="false" />
+    <Property Name="Sign" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LowValue" Type="varchar" MaxLength="10" />
+    <Property Name="HighValue" Type="varchar" MaxLength="10" />
+    <Property Name="DayType" Type="varchar" MaxLength="15" />
+    <Property Name="Period" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="DateLimit" Type="int" Nullable="false" />
+    <Property Name="Required" Type="bit" Nullable="false" />
+    <Property Name="MaxDateLimit" Type="int" Nullable="false" />
+    <Property Name="Include" Type="bit" Nullable="false" />
+    <Property Name="LowValueVisible" Type="bit" Nullable="false" />
+    <Property Name="HighValueVisible" Type="bit" Nullable="false" />
+    <Property Name="UpdateLowValue" Type="bit" Nullable="false" />
+    <Property Name="UpdateHighValue" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportSheetOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="ReportSheet" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaterialPrice" Type="bit" Nullable="false" />
+    <Property Name="ProductHierarchy" Type="bit" Nullable="false" />
+    <Property Name="CustomerHierarchy" Type="bit" Nullable="false" />
+    <Property Name="SalesValue" Type="bit" Nullable="false" />
+    <Property Name="QuantityUnit" Type="bit" Nullable="false" />
+    <Property Name="Currency" Type="bit" Nullable="false" />
+    <Property Name="CurrencyYear" Type="bit" Nullable="false" />
+    <Property Name="CreateNewPlan" Type="bit" Nullable="false" />
+    <Property Name="SavePriorities" Type="bit" Nullable="false" />
+    <Property Name="BudgetVersion" Type="bit" Nullable="false" />
+    <Property Name="FormatGraph" Type="bit" Nullable="false" />
+    <Property Name="SaveGroup" Type="bit" Nullable="false" />
+    <Property Name="SaveBinTest" Type="bit" Nullable="false" />
+    <Property Name="SaveExcludedTypes" Type="bit" Nullable="false" />
+    <Property Name="UpdateSAP" Type="bit" Nullable="false" />
+    <Property Name="ShowOptions" Type="bit" Nullable="false" />
+    <Property Name="ShelfLifeTypes" Type="bit" Nullable="false" />
+    <Property Name="MaterialsIncluded" Type="bit" Nullable="false" />
+    <Property Name="SaveList" Type="bit" Nullable="false" />
+    <Property Name="SaveManko" Type="bit" Nullable="false" />
+    <Property Name="ShowStocks" Type="bit" Nullable="false" />
+    <Property Name="ShowMD04Data" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportsLinkedQuery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="SubReports" Type="int" Nullable="false" />
+    <Property Name="SheetName" Type="varchar" MaxLength="20" />
+    <Property Name="ListObjectName" Type="varchar" MaxLength="20" />
+    <Property Name="QueryName" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ReportStatistics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="ReportCount" Type="int" Nullable="false" />
+    <Property Name="LastOpened" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RfcConnection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="10" />
+    <Property Name="Client" Type="varchar" MaxLength="10" />
+    <Property Name="Language" Type="varchar" MaxLength="2" />
+    <Property Name="HostServer" Type="varchar" MaxLength="50" />
+    <Property Name="SysNr" Type="int" Nullable="false" />
+    <Property Name="IdleTimeout" Type="varchar" MaxLength="5" />
+    <Property Name="UseSAPGui" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="RighClickMenuFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RightClickMenuID" Type="int" Nullable="false" />
+    <Property Name="FieldName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FieldValue" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RightClickMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FunctionName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RightClickSubMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RightClickMenuID" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FunctionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BeginGroup" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserGroupID" Type="int" Nullable="false" />
+    <Property Name="UserGroupName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserReportMultipleSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="VariantID" Type="int" Nullable="false" />
+    <Property Name="ScreenID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LowValue" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserReportSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="VariantID" Type="int" Nullable="false" />
+    <Property Name="ScreenID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Kind" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Sign" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="SelectionOption" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="LowValue" Type="varchar" MaxLength="50" />
+    <Property Name="HighValue" Type="varchar" MaxLength="50" />
+    <Property Name="MultipleSelection" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserReportVariants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="VariantName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VariantDescription" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="UserSAPSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SAPSystem" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SAPUserName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="SAPPassword" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.Views' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Views">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="ViewID" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="ViewID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="FilterField" Type="varchar(max)" />
+    <Property Name="Language" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwBrands' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwBrands">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwBudgetVersions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwBudgetVersions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwCompanyCodes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwCompanyCodes">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwCurrency' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwCurrency">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwCurrentUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwCurrentUser">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LastLoggedOn" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastLoggedOn" Type="datetime" Nullable="false" />
+    <Property Name="UserGroup" Type="int" />
+    <Property Name="SAPSystem" Type="varchar" MaxLength="10" />
+    <Property Name="DecimalSeparator" Type="varchar" MaxLength="1" />
+    <Property Name="ThousandSeparator" Type="varchar" MaxLength="1" />
+    <Property Name="DateFormat" Type="varchar" MaxLength="10" />
+    <Property Name="Language" Type="varchar" MaxLength="2" />
+    <Property Name="ProductionPlant" Type="varchar" MaxLength="10" />
+    <Property Name="BwHana" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwCustomerHierarchy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwCustomerHierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwDayType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwDayType">
+    <Key>
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="int" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwDistributionChannel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwDistributionChannel">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwLogicalSystems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwLogicalSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwMaterialGroups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwMaterialGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwMaterialPrice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwMaterialPrice">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwMaterialsIncluded' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwMaterialsIncluded">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwMaterialTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwMaterialTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwMRPControllers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwMRPControllers">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+    <Property Name="FilterField" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwPlants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwPlants">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwProductHierarchy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwProductHierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwProductionScheduler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwProductionScheduler">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="FilterField" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwProfitCenters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwProfitCenters">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwPurchasingGroups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwPurchasingGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwQuantityUnit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwQuantityUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwRelativePeriods' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwRelativePeriods">
+    <Key>
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="int" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwReportGroups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwReportGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwSalesOrganizations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwSalesOrganizations">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwSalesValue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwSalesValue">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwSAPSystems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwSAPSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwShelfLifeTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwShelfLifeTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwShowMD04Data' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwShowMD04Data">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwShowOptions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwShowOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwShowStocks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwShowStocks">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwStorageLocations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwStorageLocations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwUserSAPSystems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwUserSAPSystems">
+    <Key>
+      <PropertyRef Name="SAPSystem" />
+      <PropertyRef Name="SAPUserName" />
+      <PropertyRef Name="SAPPassword" />
+    </Key>
+    <Property Name="SAPSystem" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SAPUserName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="SAPPassword" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwValuationClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwValuationClass">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwWarehouseNumbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwWarehouseNumbers">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OrklaRT.dbo.vwWorkCenterGroups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwWorkCenterGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Name="ID" Type="varchar(max)" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="CombinedText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DataModelStoreContainer">
+    <EntitySet Name="BDCInput" EntityType="Self.BDCInput" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentUserReportFields" EntityType="Self.CurrentUserReportFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentUserReportMultipleSelections" EntityType="Self.CurrentUserReportMultipleSelections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentUserReportSelections" EntityType="Self.CurrentUserReportSelections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentUserReportVariants" EntityType="Self.CurrentUserReportVariants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrentUsers" EntityType="Self.CurrentUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExchangeRates" EntityType="Self.ExchangeRates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PivotLayouts" EntityType="Self.PivotLayouts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PivotLayoutVariants" EntityType="Self.PivotLayoutVariants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PPLockedOrders" EntityType="Self.PPLockedOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductionPlanData" EntityType="Self.ProductionPlanData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportComments" EntityType="Self.ReportComments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportGroups" EntityType="Self.ReportGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportSelectionDefaultValues" EntityType="Self.ReportSelectionDefaultValues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportSelections" EntityType="Self.ReportSelections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportSheetOptions" EntityType="Self.ReportSheetOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportsLinkedQuery" EntityType="Self.ReportsLinkedQuery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportStatistics" EntityType="Self.ReportStatistics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RfcConnection" EntityType="Self.RfcConnection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RighClickMenuFields" EntityType="Self.RighClickMenuFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RightClickMenu" EntityType="Self.RightClickMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RightClickSubMenu" EntityType="Self.RightClickSubMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroups" EntityType="Self.UserGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserReportMultipleSelections" EntityType="Self.UserReportMultipleSelections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserReportSelections" EntityType="Self.UserReportSelections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserReportVariants" EntityType="Self.UserReportVariants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSAPSystems" EntityType="Self.UserSAPSystems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportOptions" EntityType="Self.ReportOptions" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[ReportOptions].[ID] AS [ID], 
+[ReportOptions].[ReportID] AS [ReportID], 
+[ReportOptions].[MaterialPrice] AS [MaterialPrice], 
+[ReportOptions].[ProductHierarchy] AS [ProductHierarchy], 
+[ReportOptions].[CustomerHierarchy] AS [CustomerHierarchy], 
+[ReportOptions].[SalesValue] AS [SalesValue], 
+[ReportOptions].[QuantityUnit] AS [QuantityUnit], 
+[ReportOptions].[Currency] AS [Currency], 
+[ReportOptions].[CurrencyYear] AS [CurrencyYear], 
+[ReportOptions].[CreateNewPlan] AS [CreateNewPlan], 
+[ReportOptions].[SavePriorities] AS [SavePriorities], 
+[ReportOptions].[BudgetVersion] AS [BudgetVersion], 
+[ReportOptions].[FormatGraph] AS [FormatGraph], 
+[ReportOptions].[SaveGroup] AS [SaveGroup], 
+[ReportOptions].[SaveBinTest] AS [SaveBinTest], 
+[ReportOptions].[SaveExcludedTypes] AS [SaveExcludedTypes], 
+[ReportOptions].[UpdateSAP] AS [UpdateSAP], 
+[ReportOptions].[ShowOptions] AS [ShowOptions], 
+[ReportOptions].[ShelfLifeTypes] AS [ShelfLifeTypes], 
+[ReportOptions].[MaterialsIncluded] AS [MaterialsIncluded], 
+[ReportOptions].[SaveList] AS [SaveList], 
+[ReportOptions].[SaveManko] AS [SaveManko], 
+[ReportOptions].[ShowStocks] AS [ShowStocks], 
+[ReportOptions].[ShowMD04Data] AS [ShowMD04Data]
+FROM [dbo].[ReportOptions] AS [ReportOptions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Views" EntityType="Self.Views" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Views].[ID] AS [ID], 
+[Views].[Text] AS [Text], 
+[Views].[ViewID] AS [ViewID], 
+[Views].[FilterField] AS [FilterField], 
+[Views].[Language] AS [Language]
+FROM [dbo].[Views] AS [Views]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwBrands" EntityType="Self.vwBrands" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwBrands].[ID] AS [ID], 
+[vwBrands].[Text] AS [Text], 
+[vwBrands].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwBrands] AS [vwBrands]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwBudgetVersions" EntityType="Self.vwBudgetVersions" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwBudgetVersions].[ID] AS [ID], 
+[vwBudgetVersions].[Text] AS [Text]
+FROM [dbo].[vwBudgetVersions] AS [vwBudgetVersions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwCompanyCodes" EntityType="Self.vwCompanyCodes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwCompanyCodes].[ID] AS [ID], 
+[vwCompanyCodes].[Text] AS [Text], 
+[vwCompanyCodes].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwCompanyCodes] AS [vwCompanyCodes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwCurrency" EntityType="Self.vwCurrency" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwCurrency].[ID] AS [ID], 
+[vwCurrency].[Text] AS [Text]
+FROM [dbo].[vwCurrency] AS [vwCurrency]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwCurrentUser" EntityType="Self.vwCurrentUser" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwCurrentUser].[ID] AS [ID], 
+[vwCurrentUser].[UserName] AS [UserName], 
+[vwCurrentUser].[LastLoggedOn] AS [LastLoggedOn], 
+[vwCurrentUser].[UserGroup] AS [UserGroup], 
+[vwCurrentUser].[SAPSystem] AS [SAPSystem], 
+[vwCurrentUser].[DecimalSeparator] AS [DecimalSeparator], 
+[vwCurrentUser].[ThousandSeparator] AS [ThousandSeparator], 
+[vwCurrentUser].[DateFormat] AS [DateFormat], 
+[vwCurrentUser].[Language] AS [Language], 
+[vwCurrentUser].[ProductionPlant] AS [ProductionPlant], 
+[vwCurrentUser].[BwHana] AS [BwHana]
+FROM [dbo].[vwCurrentUser] AS [vwCurrentUser]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwCustomerHierarchy" EntityType="Self.vwCustomerHierarchy" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwCustomerHierarchy].[ID] AS [ID], 
+[vwCustomerHierarchy].[Text] AS [Text]
+FROM [dbo].[vwCustomerHierarchy] AS [vwCustomerHierarchy]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwDayType" EntityType="Self.vwDayType" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwDayType].[ID] AS [ID], 
+[vwDayType].[Text] AS [Text]
+FROM [dbo].[vwDayType] AS [vwDayType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwDistributionChannel" EntityType="Self.vwDistributionChannel" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwDistributionChannel].[ID] AS [ID], 
+[vwDistributionChannel].[Text] AS [Text], 
+[vwDistributionChannel].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwDistributionChannel] AS [vwDistributionChannel]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwLogicalSystems" EntityType="Self.vwLogicalSystems" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwLogicalSystems].[ID] AS [ID], 
+[vwLogicalSystems].[Text] AS [Text]
+FROM [dbo].[vwLogicalSystems] AS [vwLogicalSystems]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwMaterialGroups" EntityType="Self.vwMaterialGroups" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwMaterialGroups].[ID] AS [ID], 
+[vwMaterialGroups].[Text] AS [Text], 
+[vwMaterialGroups].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwMaterialGroups] AS [vwMaterialGroups]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwMaterialPrice" EntityType="Self.vwMaterialPrice" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwMaterialPrice].[ID] AS [ID], 
+[vwMaterialPrice].[Text] AS [Text]
+FROM [dbo].[vwMaterialPrice] AS [vwMaterialPrice]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwMaterialsIncluded" EntityType="Self.vwMaterialsIncluded" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwMaterialsIncluded].[ID] AS [ID], 
+[vwMaterialsIncluded].[Text] AS [Text]
+FROM [dbo].[vwMaterialsIncluded] AS [vwMaterialsIncluded]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwMaterialTypes" EntityType="Self.vwMaterialTypes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwMaterialTypes].[ID] AS [ID], 
+[vwMaterialTypes].[Text] AS [Text], 
+[vwMaterialTypes].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwMaterialTypes] AS [vwMaterialTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwMRPControllers" EntityType="Self.vwMRPControllers" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwMRPControllers].[ID] AS [ID], 
+[vwMRPControllers].[Text] AS [Text], 
+[vwMRPControllers].[CombinedText] AS [CombinedText], 
+[vwMRPControllers].[FilterField] AS [FilterField]
+FROM [dbo].[vwMRPControllers] AS [vwMRPControllers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwPlants" EntityType="Self.vwPlants" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwPlants].[ID] AS [ID], 
+[vwPlants].[Text] AS [Text], 
+[vwPlants].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwPlants] AS [vwPlants]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwProductHierarchy" EntityType="Self.vwProductHierarchy" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwProductHierarchy].[ID] AS [ID], 
+[vwProductHierarchy].[Text] AS [Text]
+FROM [dbo].[vwProductHierarchy] AS [vwProductHierarchy]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwProductionScheduler" EntityType="Self.vwProductionScheduler" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwProductionScheduler].[ID] AS [ID], 
+[vwProductionScheduler].[Text] AS [Text], 
+[vwProductionScheduler].[FilterField] AS [FilterField]
+FROM [dbo].[vwProductionScheduler] AS [vwProductionScheduler]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwProfitCenters" EntityType="Self.vwProfitCenters" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwProfitCenters].[ID] AS [ID], 
+[vwProfitCenters].[Text] AS [Text], 
+[vwProfitCenters].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwProfitCenters] AS [vwProfitCenters]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwPurchasingGroups" EntityType="Self.vwPurchasingGroups" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwPurchasingGroups].[ID] AS [ID], 
+[vwPurchasingGroups].[Text] AS [Text], 
+[vwPurchasingGroups].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwPurchasingGroups] AS [vwPurchasingGroups]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwQuantityUnit" EntityType="Self.vwQuantityUnit" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwQuantityUnit].[ID] AS [ID], 
+[vwQuantityUnit].[Text] AS [Text]
+FROM [dbo].[vwQuantityUnit] AS [vwQuantityUnit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwRelativePeriods" EntityType="Self.vwRelativePeriods" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwRelativePeriods].[ID] AS [ID], 
+[vwRelativePeriods].[Text] AS [Text]
+FROM [dbo].[vwRelativePeriods] AS [vwRelativePeriods]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwReportGroups" EntityType="Self.vwReportGroups" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwReportGroups].[ID] AS [ID], 
+[vwReportGroups].[Text] AS [Text]
+FROM [dbo].[vwReportGroups] AS [vwReportGroups]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwSalesOrganizations" EntityType="Self.vwSalesOrganizations" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwSalesOrganizations].[ID] AS [ID], 
+[vwSalesOrganizations].[Text] AS [Text], 
+[vwSalesOrganizations].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwSalesOrganizations] AS [vwSalesOrganizations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwSalesValue" EntityType="Self.vwSalesValue" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwSalesValue].[ID] AS [ID], 
+[vwSalesValue].[Text] AS [Text]
+FROM [dbo].[vwSalesValue] AS [vwSalesValue]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwSAPSystems" EntityType="Self.vwSAPSystems" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwSAPSystems].[ID] AS [ID], 
+[vwSAPSystems].[Text] AS [Text]
+FROM [dbo].[vwSAPSystems] AS [vwSAPSystems]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwShelfLifeTypes" EntityType="Self.vwShelfLifeTypes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwShelfLifeTypes].[ID] AS [ID], 
+[vwShelfLifeTypes].[Text] AS [Text]
+FROM [dbo].[vwShelfLifeTypes] AS [vwShelfLifeTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwShowMD04Data" EntityType="Self.vwShowMD04Data" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwShowMD04Data].[ID] AS [ID], 
+[vwShowMD04Data].[Text] AS [Text]
+FROM [dbo].[vwShowMD04Data] AS [vwShowMD04Data]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwShowOptions" EntityType="Self.vwShowOptions" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwShowOptions].[ID] AS [ID], 
+[vwShowOptions].[Text] AS [Text]
+FROM [dbo].[vwShowOptions] AS [vwShowOptions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwShowStocks" EntityType="Self.vwShowStocks" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwShowStocks].[ID] AS [ID], 
+[vwShowStocks].[Text] AS [Text]
+FROM [dbo].[vwShowStocks] AS [vwShowStocks]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwStorageLocations" EntityType="Self.vwStorageLocations" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwStorageLocations].[ID] AS [ID], 
+[vwStorageLocations].[Text] AS [Text]
+FROM [dbo].[vwStorageLocations] AS [vwStorageLocations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwUserSAPSystems" EntityType="Self.vwUserSAPSystems" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwUserSAPSystems].[SAPSystem] AS [SAPSystem], 
+[vwUserSAPSystems].[SAPUserName] AS [SAPUserName], 
+[vwUserSAPSystems].[SAPPassword] AS [SAPPassword]
+FROM [dbo].[vwUserSAPSystems] AS [vwUserSAPSystems]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwValuationClass" EntityType="Self.vwValuationClass" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwValuationClass].[ID] AS [ID], 
+[vwValuationClass].[Text] AS [Text], 
+[vwValuationClass].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwValuationClass] AS [vwValuationClass]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwWarehouseNumbers" EntityType="Self.vwWarehouseNumbers" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwWarehouseNumbers].[ID] AS [ID], 
+[vwWarehouseNumbers].[Text] AS [Text]
+FROM [dbo].[vwWarehouseNumbers] AS [vwWarehouseNumbers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwWorkCenterGroups" EntityType="Self.vwWorkCenterGroups" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwWorkCenterGroups].[ID] AS [ID], 
+[vwWorkCenterGroups].[Text] AS [Text], 
+[vwWorkCenterGroups].[CombinedText] AS [CombinedText]
+FROM [dbo].[vwWorkCenterGroups] AS [vwWorkCenterGroups]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

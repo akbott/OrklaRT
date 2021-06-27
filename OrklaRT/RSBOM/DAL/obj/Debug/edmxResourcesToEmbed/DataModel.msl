@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="SAPExlEntities">
+    <EntitySetMapping Name="BDCInput">
+      <EntityTypeMapping TypeName="DataModel.BDCInput">
+        <MappingFragment StoreEntitySet="BDCInput">
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ValueFieldName" ColumnName="ValueFieldName" />
+          <ScalarProperty Name="TransactionCode" ColumnName="TransactionCode" />
+          <ScalarProperty Name="ScreenInput" ColumnName="ScreenInput" />
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Dynpro" ColumnName="Dynpro" />
+          <ScalarProperty Name="Program" ColumnName="Program" />
+          <ScalarProperty Name="BCDInputSeq" ColumnName="BCDInputSeq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExchangeRates">
+      <EntityTypeMapping TypeName="DataModel.ExchangeRates">
+        <MappingFragment StoreEntitySet="ExchangeRates">
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ToCurrency" ColumnName="ToCurrency" />
+          <ScalarProperty Name="ExchangeRateType" ColumnName="ExchangeRateType" />
+          <ScalarProperty Name="FromCurrency" ColumnName="FromCurrency" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportGroups">
+      <EntityTypeMapping TypeName="DataModel.ReportGroups">
+        <MappingFragment StoreEntitySet="ReportGroups">
+          <ScalarProperty Name="ReportGroup" ColumnName="ReportGroup" />
+          <ScalarProperty Name="ReportSubGroupName" ColumnName="ReportSubGroupName" />
+          <ScalarProperty Name="ReportSubGroupID" ColumnName="ReportSubGroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportOptions">
+      <EntityTypeMapping TypeName="DataModel.ReportOptions">
+        <MappingFragment StoreEntitySet="ReportOptions">
+          <ScalarProperty Name="ShowMD04Data" ColumnName="ShowMD04Data" />
+          <ScalarProperty Name="ShowStocks" ColumnName="ShowStocks" />
+          <ScalarProperty Name="SaveManko" ColumnName="SaveManko" />
+          <ScalarProperty Name="SaveList" ColumnName="SaveList" />
+          <ScalarProperty Name="MaterialsIncluded" ColumnName="MaterialsIncluded" />
+          <ScalarProperty Name="ShelfLifeTypes" ColumnName="ShelfLifeTypes" />
+          <ScalarProperty Name="ShowOptions" ColumnName="ShowOptions" />
+          <ScalarProperty Name="UpdateSAP" ColumnName="UpdateSAP" />
+          <ScalarProperty Name="SaveExcludedTypes" ColumnName="SaveExcludedTypes" />
+          <ScalarProperty Name="SaveBinTest" ColumnName="SaveBinTest" />
+          <ScalarProperty Name="SaveGroup" ColumnName="SaveGroup" />
+          <ScalarProperty Name="FormatGraph" ColumnName="FormatGraph" />
+          <ScalarProperty Name="BudgetVersion" ColumnName="BudgetVersion" />
+          <ScalarProperty Name="SavePriorities" ColumnName="SavePriorities" />
+          <ScalarProperty Name="CreateNewPlan" ColumnName="CreateNewPlan" />
+          <ScalarProperty Name="CurrencyYear" ColumnName="CurrencyYear" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="QuantityUnit" ColumnName="QuantityUnit" />
+          <ScalarProperty Name="SalesValue" ColumnName="SalesValue" />
+          <ScalarProperty Name="CustomerHierarchy" ColumnName="CustomerHierarchy" />
+          <ScalarProperty Name="ProductHierarchy" ColumnName="ProductHierarchy" />
+          <ScalarProperty Name="MaterialPrice" ColumnName="MaterialPrice" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSheetOptions">
+      <EntityTypeMapping TypeName="DataModel.ReportSheetOptions">
+        <MappingFragment StoreEntitySet="ReportSheetOptions">
+          <ScalarProperty Name="ShowMD04Data" ColumnName="ShowMD04Data" />
+          <ScalarProperty Name="ShowStocks" ColumnName="ShowStocks" />
+          <ScalarProperty Name="SaveManko" ColumnName="SaveManko" />
+          <ScalarProperty Name="SaveList" ColumnName="SaveList" />
+          <ScalarProperty Name="MaterialsIncluded" ColumnName="MaterialsIncluded" />
+          <ScalarProperty Name="ShelfLifeTypes" ColumnName="ShelfLifeTypes" />
+          <ScalarProperty Name="ShowOptions" ColumnName="ShowOptions" />
+          <ScalarProperty Name="UpdateSAP" ColumnName="UpdateSAP" />
+          <ScalarProperty Name="SaveExcludedTypes" ColumnName="SaveExcludedTypes" />
+          <ScalarProperty Name="SaveBinTest" ColumnName="SaveBinTest" />
+          <ScalarProperty Name="SaveGroup" ColumnName="SaveGroup" />
+          <ScalarProperty Name="FormatGraph" ColumnName="FormatGraph" />
+          <ScalarProperty Name="BudgetVersion" ColumnName="BudgetVersion" />
+          <ScalarProperty Name="SavePriorities" ColumnName="SavePriorities" />
+          <ScalarProperty Name="CreateNewPlan" ColumnName="CreateNewPlan" />
+          <ScalarProperty Name="CurrencyYear" ColumnName="CurrencyYear" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="QuantityUnit" ColumnName="QuantityUnit" />
+          <ScalarProperty Name="SalesValue" ColumnName="SalesValue" />
+          <ScalarProperty Name="CustomerHierarchy" ColumnName="CustomerHierarchy" />
+          <ScalarProperty Name="ProductHierarchy" ColumnName="ProductHierarchy" />
+          <ScalarProperty Name="MaterialPrice" ColumnName="MaterialPrice" />
+          <ScalarProperty Name="ReportSheet" ColumnName="ReportSheet" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RighClickMenuFields">
+      <EntityTypeMapping TypeName="DataModel.RighClickMenuFields">
+        <MappingFragment StoreEntitySet="RighClickMenuFields">
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="RightClickMenuID" ColumnName="RightClickMenuID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RightClickSubMenu">
+      <EntityTypeMapping TypeName="DataModel.RightClickSubMenu">
+        <MappingFragment StoreEntitySet="RightClickSubMenu">
+          <ScalarProperty Name="BeginGroup" ColumnName="BeginGroup" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="RightClickMenuID" ColumnName="RightClickMenuID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Views">
+      <EntityTypeMapping TypeName="DataModel.Views">
+        <MappingFragment StoreEntitySet="Views">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="FilterField" ColumnName="FilterField" />
+          <ScalarProperty Name="ViewID" ColumnName="ViewID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCompanyCodes">
+      <EntityTypeMapping TypeName="DataModel.vwCompanyCodes">
+        <MappingFragment StoreEntitySet="vwCompanyCodes">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCurrency">
+      <EntityTypeMapping TypeName="DataModel.vwCurrency">
+        <MappingFragment StoreEntitySet="vwCurrency">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCustomerHierarchy">
+      <EntityTypeMapping TypeName="DataModel.vwCustomerHierarchy">
+        <MappingFragment StoreEntitySet="vwCustomerHierarchy">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwDayType">
+      <EntityTypeMapping TypeName="DataModel.vwDayType">
+        <MappingFragment StoreEntitySet="vwDayType">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMaterialPrice">
+      <EntityTypeMapping TypeName="DataModel.vwMaterialPrice">
+        <MappingFragment StoreEntitySet="vwMaterialPrice">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMaterialTypes">
+      <EntityTypeMapping TypeName="DataModel.vwMaterialTypes">
+        <MappingFragment StoreEntitySet="vwMaterialTypes">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwPlants">
+      <EntityTypeMapping TypeName="DataModel.vwPlants">
+        <MappingFragment StoreEntitySet="vwPlants">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductHierarchy">
+      <EntityTypeMapping TypeName="DataModel.vwProductHierarchy">
+        <MappingFragment StoreEntitySet="vwProductHierarchy">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwQuantityUnit">
+      <EntityTypeMapping TypeName="DataModel.vwQuantityUnit">
+        <MappingFragment StoreEntitySet="vwQuantityUnit">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwRelativePeriods">
+      <EntityTypeMapping TypeName="DataModel.vwRelativePeriods">
+        <MappingFragment StoreEntitySet="vwRelativePeriods">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwReportGroups">
+      <EntityTypeMapping TypeName="DataModel.vwReportGroups">
+        <MappingFragment StoreEntitySet="vwReportGroups">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwSalesValue">
+      <EntityTypeMapping TypeName="DataModel.vwSalesValue">
+        <MappingFragment StoreEntitySet="vwSalesValue">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PivotLayouts">
+      <EntityTypeMapping TypeName="DataModel.PivotLayouts">
+        <MappingFragment StoreEntitySet="PivotLayouts">
+          <ScalarProperty Name="PivotLayout" ColumnName="PivotLayout" />
+          <ScalarProperty Name="VariantID" ColumnName="VariantID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PivotLayoutVariants">
+      <EntityTypeMapping TypeName="DataModel.PivotLayoutVariants">
+        <MappingFragment StoreEntitySet="PivotLayoutVariants">
+          <ScalarProperty Name="VariantDescription" ColumnName="VariantDescription" />
+          <ScalarProperty Name="VariantName" ColumnName="VariantName" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwSalesOrganizations">
+      <EntityTypeMapping TypeName="DataModel.vwSalesOrganizations">
+        <MappingFragment StoreEntitySet="vwSalesOrganizations">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportComments">
+      <EntityTypeMapping TypeName="DataModel.ReportComments">
+        <MappingFragment StoreEntitySet="ReportComments">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Date1" ColumnName="Date1" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserReportMultipleSelections">
+      <EntityTypeMapping TypeName="DataModel.UserReportMultipleSelections">
+        <MappingFragment StoreEntitySet="UserReportMultipleSelections">
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="VariantID" ColumnName="VariantID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserReportVariants">
+      <EntityTypeMapping TypeName="DataModel.UserReportVariants">
+        <MappingFragment StoreEntitySet="UserReportVariants">
+          <ScalarProperty Name="VariantDescription" ColumnName="VariantDescription" />
+          <ScalarProperty Name="VariantName" ColumnName="VariantName" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentUserReportVariants">
+      <EntityTypeMapping TypeName="DataModel.CurrentUserReportVariants">
+        <MappingFragment StoreEntitySet="CurrentUserReportVariants">
+          <ScalarProperty Name="VariantID" ColumnName="VariantID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSelectionDefaultValues">
+      <EntityTypeMapping TypeName="DataModel.ReportSelectionDefaultValues">
+        <MappingFragment StoreEntitySet="ReportSelectionDefaultValues">
+          <ScalarProperty Name="HighValue" ColumnName="HighValue" />
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMaterialGroups">
+      <EntityTypeMapping TypeName="DataModel.vwMaterialGroups">
+        <MappingFragment StoreEntitySet="vwMaterialGroups">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProfitCenters">
+      <EntityTypeMapping TypeName="DataModel.vwProfitCenters">
+        <MappingFragment StoreEntitySet="vwProfitCenters">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reports">
+      <EntityTypeMapping TypeName="DataModel.Reports">
+        <MappingFragment StoreEntitySet="Reports">
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="ReportOptions" ColumnName="ReportOptions" />
+          <ScalarProperty Name="MaterialHelp" ColumnName="MaterialHelp" />
+          <ScalarProperty Name="MultipleSelection" ColumnName="MultipleSelection" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="QueryName" ColumnName="QueryName" />
+          <ScalarProperty Name="BeginGroup" ColumnName="BeginGroup" />
+          <ScalarProperty Name="ReportDefinition" ColumnName="ReportDefinition" />
+          <ScalarProperty Name="ReportGroup" ColumnName="ReportGroup" />
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentUserReportMultipleSelections">
+      <EntityTypeMapping TypeName="DataModel.CurrentUserReportMultipleSelections">
+        <MappingFragment StoreEntitySet="CurrentUserReportMultipleSelections">
+          <ScalarProperty Name="ComboBox" ColumnName="ComboBox" />
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="VariantID" ColumnName="VariantID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentUserReportSelections">
+      <EntityTypeMapping TypeName="DataModel.CurrentUserReportSelections">
+        <MappingFragment StoreEntitySet="CurrentUserReportSelections">
+          <ScalarProperty Name="MultipleSelection" ColumnName="MultipleSelection" />
+          <ScalarProperty Name="HighValue" ColumnName="HighValue" />
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+          <ScalarProperty Name="SelectionOption" ColumnName="SelectionOption" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="VariantID" ColumnName="VariantID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserReportSelections">
+      <EntityTypeMapping TypeName="DataModel.UserReportSelections">
+        <MappingFragment StoreEntitySet="UserReportSelections">
+          <ScalarProperty Name="MultipleSelection" ColumnName="MultipleSelection" />
+          <ScalarProperty Name="HighValue" ColumnName="HighValue" />
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+          <ScalarProperty Name="SelectionOption" ColumnName="SelectionOption" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="VariantID" ColumnName="VariantID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportStatistics">
+      <EntityTypeMapping TypeName="DataModel.ReportStatistics">
+        <MappingFragment StoreEntitySet="ReportStatistics">
+          <ScalarProperty Name="LastOpened" ColumnName="LastOpened" />
+          <ScalarProperty Name="ReportCount" ColumnName="ReportCount" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductionScheduler">
+      <EntityTypeMapping TypeName="DataModel.vwProductionScheduler">
+        <MappingFragment StoreEntitySet="vwProductionScheduler">
+          <ScalarProperty Name="FilterField" ColumnName="FilterField" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwBrands">
+      <EntityTypeMapping TypeName="DataModel.vwBrands">
+        <MappingFragment StoreEntitySet="vwBrands">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwLogicalSystems">
+      <EntityTypeMapping TypeName="DataModel.vwLogicalSystems">
+        <MappingFragment StoreEntitySet="vwLogicalSystems">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwSAPSystems">
+      <EntityTypeMapping TypeName="DataModel.vwSAPSystems">
+        <MappingFragment StoreEntitySet="vwSAPSystems">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSAPSystems">
+      <EntityTypeMapping TypeName="DataModel.UserSAPSystems">
+        <MappingFragment StoreEntitySet="UserSAPSystems">
+          <ScalarProperty Name="SAPPassword" ColumnName="SAPPassword" />
+          <ScalarProperty Name="SAPUserName" ColumnName="SAPUserName" />
+          <ScalarProperty Name="SAPSystem" ColumnName="SAPSystem" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwUserSAPSystems">
+      <EntityTypeMapping TypeName="DataModel.vwUserSAPSystems">
+        <MappingFragment StoreEntitySet="vwUserSAPSystems">
+          <ScalarProperty Name="SAPPassword" ColumnName="SAPPassword" />
+          <ScalarProperty Name="SAPUserName" ColumnName="SAPUserName" />
+          <ScalarProperty Name="SAPSystem" ColumnName="SAPSystem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwWorkCenterGroups">
+      <EntityTypeMapping TypeName="DataModel.vwWorkCenterGroups">
+        <MappingFragment StoreEntitySet="vwWorkCenterGroups">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportsLinkedQuery">
+      <EntityTypeMapping TypeName="DataModel.ReportsLinkedQuery">
+        <MappingFragment StoreEntitySet="ReportsLinkedQuery">
+          <ScalarProperty Name="QueryName" ColumnName="QueryName" />
+          <ScalarProperty Name="ListObjectName" ColumnName="ListObjectName" />
+          <ScalarProperty Name="SheetName" ColumnName="SheetName" />
+          <ScalarProperty Name="SubReports" ColumnName="SubReports" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwBudgetVersions">
+      <EntityTypeMapping TypeName="DataModel.vwBudgetVersions">
+        <MappingFragment StoreEntitySet="vwBudgetVersions">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentUsers">
+      <EntityTypeMapping TypeName="DataModel.CurrentUsers">
+        <MappingFragment StoreEntitySet="CurrentUsers">
+          <ScalarProperty Name="BwHana" ColumnName="BwHana" />
+          <ScalarProperty Name="ProductionPlant" ColumnName="ProductionPlant" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="DateFormat" ColumnName="DateFormat" />
+          <ScalarProperty Name="ThousandSeparator" ColumnName="ThousandSeparator" />
+          <ScalarProperty Name="DecimalSeparator" ColumnName="DecimalSeparator" />
+          <ScalarProperty Name="SAPSystem" ColumnName="SAPSystem" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCurrentUser">
+      <EntityTypeMapping TypeName="DataModel.vwCurrentUser">
+        <MappingFragment StoreEntitySet="vwCurrentUser">
+          <ScalarProperty Name="BwHana" ColumnName="BwHana" />
+          <ScalarProperty Name="ProductionPlant" ColumnName="ProductionPlant" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="DateFormat" ColumnName="DateFormat" />
+          <ScalarProperty Name="ThousandSeparator" ColumnName="ThousandSeparator" />
+          <ScalarProperty Name="DecimalSeparator" ColumnName="DecimalSeparator" />
+          <ScalarProperty Name="SAPSystem" ColumnName="SAPSystem" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="DataModel.UserGroups">
+        <MappingFragment StoreEntitySet="UserGroups">
+          <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwValuationClass">
+      <EntityTypeMapping TypeName="DataModel.vwValuationClass">
+        <MappingFragment StoreEntitySet="vwValuationClass">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMRPControllers">
+      <EntityTypeMapping TypeName="DataModel.vwMRPControllers">
+        <MappingFragment StoreEntitySet="vwMRPControllers">
+          <ScalarProperty Name="FilterField" ColumnName="FilterField" />
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwPurchasingGroups">
+      <EntityTypeMapping TypeName="DataModel.vwPurchasingGroups">
+        <MappingFragment StoreEntitySet="vwPurchasingGroups">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwShowOptions">
+      <EntityTypeMapping TypeName="DataModel.vwShowOptions">
+        <MappingFragment StoreEntitySet="vwShowOptions">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwShelfLifeTypes">
+      <EntityTypeMapping TypeName="DataModel.vwShelfLifeTypes">
+        <MappingFragment StoreEntitySet="vwShelfLifeTypes">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwWarehouseNumbers">
+      <EntityTypeMapping TypeName="DataModel.vwWarehouseNumbers">
+        <MappingFragment StoreEntitySet="vwWarehouseNumbers">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMaterialsIncluded">
+      <EntityTypeMapping TypeName="DataModel.vwMaterialsIncluded">
+        <MappingFragment StoreEntitySet="vwMaterialsIncluded">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwStorageLocations">
+      <EntityTypeMapping TypeName="DataModel.vwStorageLocations">
+        <MappingFragment StoreEntitySet="vwStorageLocations">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RightClickMenu">
+      <EntityTypeMapping TypeName="DataModel.RightClickMenu">
+        <MappingFragment StoreEntitySet="RightClickMenu">
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSelections">
+      <EntityTypeMapping TypeName="DataModel.ReportSelections">
+        <MappingFragment StoreEntitySet="ReportSelections">
+          <ScalarProperty Name="UpdateHighValue" ColumnName="UpdateHighValue" />
+          <ScalarProperty Name="UpdateLowValue" ColumnName="UpdateLowValue" />
+          <ScalarProperty Name="HighValueVisible" ColumnName="HighValueVisible" />
+          <ScalarProperty Name="LowValueVisible" ColumnName="LowValueVisible" />
+          <ScalarProperty Name="Include" ColumnName="Include" />
+          <ScalarProperty Name="MaxDateLimit" ColumnName="MaxDateLimit" />
+          <ScalarProperty Name="Required" ColumnName="Required" />
+          <ScalarProperty Name="DateLimit" ColumnName="DateLimit" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="DayType" ColumnName="DayType" />
+          <ScalarProperty Name="HighValue" ColumnName="HighValue" />
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="MultipleSelection" ColumnName="MultipleSelection" />
+          <ScalarProperty Name="Mandatory" ColumnName="Mandatory" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+          <ScalarProperty Name="SelectionOption" ColumnName="SelectionOption" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RfcConnection">
+      <EntityTypeMapping TypeName="DataModel.RfcConnection">
+        <MappingFragment StoreEntitySet="RfcConnection">
+          <ScalarProperty Name="UseSAPGui" ColumnName="UseSAPGui" />
+          <ScalarProperty Name="IdleTimeout" ColumnName="IdleTimeout" />
+          <ScalarProperty Name="SysNr" ColumnName="SysNr" />
+          <ScalarProperty Name="HostServer" ColumnName="HostServer" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwDistributionChannel">
+      <EntityTypeMapping TypeName="DataModel.vwDistributionChannel">
+        <MappingFragment StoreEntitySet="vwDistributionChannel">
+          <ScalarProperty Name="CombinedText" ColumnName="CombinedText" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentUserReportFields">
+      <EntityTypeMapping TypeName="DataModel.CurrentUserReportFields">
+        <MappingFragment StoreEntitySet="CurrentUserReportFields">
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="SalesOrder" ColumnName="SalesOrder" />
+          <ScalarProperty Name="PurchasingDocumnet" ColumnName="PurchasingDocumnet" />
+          <ScalarProperty Name="SalesOrganisation" ColumnName="SalesOrganisation" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="LanguageKey" ColumnName="LanguageKey" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="MaterialType" ColumnName="MaterialType" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwShowStocks">
+      <EntityTypeMapping TypeName="DataModel.vwShowStocks">
+        <MappingFragment StoreEntitySet="vwShowStocks">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwShowMD04Data">
+      <EntityTypeMapping TypeName="DataModel.vwShowMD04Data">
+        <MappingFragment StoreEntitySet="vwShowMD04Data">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPLockedOrders">
+      <EntityTypeMapping TypeName="DataModel.PPLockedOrders">
+        <MappingFragment StoreEntitySet="PPLockedOrders">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LockedDate" ColumnName="LockedDate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductionPlanData">
+      <EntityTypeMapping TypeName="DataModel.ProductionPlanData">
+        <MappingFragment StoreEntitySet="ProductionPlanData">
+          <ScalarProperty Name="CStartTime" ColumnName="CStartTime" />
+          <ScalarProperty Name="CStartDate" ColumnName="CStartDate" />
+          <ScalarProperty Name="CHelp3" ColumnName="CHelp3" />
+          <ScalarProperty Name="CHelp2" ColumnName="CHelp2" />
+          <ScalarProperty Name="CMixStatus" ColumnName="CMixStatus" />
+          <ScalarProperty Name="CCapStart" ColumnName="CCapStart" />
+          <ScalarProperty Name="CLeftNow" ColumnName="CLeftNow" />
+          <ScalarProperty Name="CCapToday" ColumnName="CCapToday" />
+          <ScalarProperty Name="CLocked" ColumnName="CLocked" />
+          <ScalarProperty Name="CAccStarted" ColumnName="CAccStarted" />
+          <ScalarProperty Name="CAccAkt" ColumnName="CAccAkt" />
+          <ScalarProperty Name="CAktHelp" ColumnName="CAktHelp" />
+          <ScalarProperty Name="CTotalValue" ColumnName="CTotalValue" />
+          <ScalarProperty Name="CNowValue" ColumnName="CNowValue" />
+          <ScalarProperty Name="CProdValue" ColumnName="CProdValue" />
+          <ScalarProperty Name="CStartValue" ColumnName="CStartValue" />
+          <ScalarProperty Name="CAccCap1" ColumnName="CAccCap1" />
+          <ScalarProperty Name="CStartCap" ColumnName="CStartCap" />
+          <ScalarProperty Name="CAccCap" ColumnName="CAccCap" />
+          <ScalarProperty Name="CStopSec" ColumnName="CStopSec" />
+          <ScalarProperty Name="CWorkCenter" ColumnName="CWorkCenter" />
+          <ScalarProperty Name="CStartSec" ColumnName="CStartSec" />
+          <ScalarProperty Name="CStop" ColumnName="CStop" />
+          <ScalarProperty Name="CStart" ColumnName="CStart" />
+          <ScalarProperty Name="CEndTime" ColumnName="CEndTime" />
+          <ScalarProperty Name="CEndDate" ColumnName="CEndDate" />
+          <ScalarProperty Name="CActive" ColumnName="CActive" />
+          <ScalarProperty Name="CStartTimeH" ColumnName="CStartTimeH" />
+          <ScalarProperty Name="CStartDateH" ColumnName="CStartDateH" />
+          <ScalarProperty Name="CSequence" ColumnName="CSequence" />
+          <ScalarProperty Name="CRemainingTime" ColumnName="CRemainingTime" />
+          <ScalarProperty Name="CSetup" ColumnName="CSetup" />
+          <ScalarProperty Name="CRtTotal" ColumnName="CRtTotal" />
+          <ScalarProperty Name="CRemainingQuantity" ColumnName="CRemainingQuantity" />
+          <ScalarProperty Name="CMaterialName" ColumnName="CMaterialName" />
+          <ScalarProperty Name="ProcTid" ColumnName="ProcTid" />
+          <ScalarProperty Name="SetupTid" ColumnName="SetupTid" />
+          <ScalarProperty Name="QuantityWithdrawn" ColumnName="QuantityWithdrawn" />
+          <ScalarProperty Name="TotalStock" ColumnName="TotalStock" />
+          <ScalarProperty Name="ConfirmedQuantityYield" ColumnName="ConfirmedQuantityYield" />
+          <ScalarProperty Name="OperationQuantity" ColumnName="OperationQuantity" />
+          <ScalarProperty Name="SetupTime" ColumnName="SetupTime" />
+          <ScalarProperty Name="TotalScrapQuantity" ColumnName="TotalScrapQuantity" />
+          <ScalarProperty Name="TotalOrderQuantity" ColumnName="TotalOrderQuantity" />
+          <ScalarProperty Name="ScrapQuantity" ColumnName="ScrapQuantity" />
+          <ScalarProperty Name="ProcessingTime" ColumnName="ProcessingTime" />
+          <ScalarProperty Name="QuantityOfGoodsReceived" ColumnName="QuantityOfGoodsReceived" />
+          <ScalarProperty Name="ConfirmedYield1" ColumnName="ConfirmedYield1" />
+          <ScalarProperty Name="ConfirmedYield" ColumnName="ConfirmedYield" />
+          <ScalarProperty Name="ConfirmedScrap" ColumnName="ConfirmedScrap" />
+          <ScalarProperty Name="RequiredMixingQuantity" ColumnName="RequiredMixingQuantity" />
+          <ScalarProperty Name="BaseQuantity" ColumnName="BaseQuantity" />
+          <ScalarProperty Name="MaterialNumber" ColumnName="MaterialNumber" />
+          <ScalarProperty Name="WorkCenter" ColumnName="WorkCenter" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="MixMaterial" ColumnName="MixMaterial" />
+          <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+          <ScalarProperty Name="MixUnit" ColumnName="MixUnit" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+          <ScalarProperty Name="ControlKey" ColumnName="ControlKey" />
+          <ScalarProperty Name="LatestScheduledStartTime" ColumnName="LatestScheduledStartTime" />
+          <ScalarProperty Name="LatestScheduledStartDate" ColumnName="LatestScheduledStartDate" />
+          <ScalarProperty Name="IndicatorPhase" ColumnName="IndicatorPhase" />
+          <ScalarProperty Name="MaterialDescription" ColumnName="MaterialDescription" />
+          <ScalarProperty Name="CapacityID" ColumnName="CapacityID" />
+          <ScalarProperty Name="ActualFinishTime" ColumnName="ActualFinishTime" />
+          <ScalarProperty Name="ActualStartExecutionTime" ColumnName="ActualStartExecutionTime" />
+          <ScalarProperty Name="ActualStartTime" ColumnName="ActualStartTime" />
+          <ScalarProperty Name="ConfirmedOrderFinishTime" ColumnName="ConfirmedOrderFinishTime" />
+          <ScalarProperty Name="ConfirmedOrderFinishDate" ColumnName="ConfirmedOrderFinishDate" />
+          <ScalarProperty Name="EarliestScheduledStartTime" ColumnName="EarliestScheduledStartTime" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="ResourceObjectID" ColumnName="ResourceObjectID" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+          <ScalarProperty Name="WorkCenterDescription" ColumnName="WorkCenterDescription" />
+          <ScalarProperty Name="ItemCategory" ColumnName="ItemCategory" />
+          <ScalarProperty Name="OrderPriority" ColumnName="OrderPriority" />
+          <ScalarProperty Name="DeletionFlag" ColumnName="DeletionFlag" />
+          <ScalarProperty Name="PlantDescription" ColumnName="PlantDescription" />
+          <ScalarProperty Name="LogicalSystem" ColumnName="LogicalSystem" />
+          <ScalarProperty Name="MixMaterialDescription" ColumnName="MixMaterialDescription" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="EarliestScheduledStartDate" ColumnName="EarliestScheduledStartDate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="DeliveryCompletedIndicator" ColumnName="DeliveryCompletedIndicator" />
+          <ScalarProperty Name="ActualStartExecutionDate" ColumnName="ActualStartExecutionDate" />
+          <ScalarProperty Name="ActualFinishExecutionDate" ColumnName="ActualFinishExecutionDate" />
+          <ScalarProperty Name="ScheduledStartTime" ColumnName="ScheduledStartTime" />
+          <ScalarProperty Name="ScheduledStartDate" ColumnName="ScheduledStartDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ScheduledFinishTime" ColumnName="ScheduledFinishTime" />
+          <ScalarProperty Name="ScheduledFinishDate" ColumnName="ScheduledFinishDate" />
+          <ScalarProperty Name="ActualFinishDate" ColumnName="ActualFinishDate" />
+          <ScalarProperty Name="ConfirmedOrderFinishDate1" ColumnName="ConfirmedOrderFinishDate1" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="PlanTime" ColumnName="PlanTime" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c9882cda1fe4c439169a895d6b3ce59" Name="Diagram1" ZoomLevel="36">
+        <EntityTypeShape EntityType="DataModel.BDCInput" Width="1.5" PointX="11.974172500881448" PointY="3.7489048856072618" />
+        <EntityTypeShape EntityType="DataModel.ExchangeRates" Width="1.5" PointX="5.6324551746400333" PointY="9.4890793159087554" />
+        <EntityTypeShape EntityType="DataModel.ReportGroups" Width="1.5" PointX="8.2288635430060619" PointY="0.16779747613137469" />
+        <EntityTypeShape EntityType="DataModel.ReportOptions" Width="1.5" PointX="8.5198531134612168" PointY="9.4541133388197576" />
+        <EntityTypeShape EntityType="DataModel.ReportSheetOptions" Width="1.5" PointX="6.44691274801591" PointY="6.0938541023497725" />
+        <EntityTypeShape EntityType="DataModel.RighClickMenuFields" Width="1.5" PointX="2.4517449114712631" PointY="0.325780943187783" />
+        <EntityTypeShape EntityType="DataModel.RightClickSubMenu" Width="1.5" PointX="3.988117795432041" PointY="19.582132348596179" />
+        <EntityTypeShape EntityType="DataModel.Views" Width="1.5" PointX="6.7798239769320112" PointY="2.7649615419865405" />
+        <EntityTypeShape EntityType="DataModel.vwCompanyCodes" Width="1.5" PointX="8.2966616620759766" PointY="0.85175536612596148" />
+        <EntityTypeShape EntityType="DataModel.vwCurrency" Width="1.5" PointX="10.084783398585758" PointY="4.6589265785454428" />
+        <EntityTypeShape EntityType="DataModel.vwCustomerHierarchy" Width="1.5" PointX="10.673622758441429" PointY="15.027780837857995" />
+        <EntityTypeShape EntityType="DataModel.vwDayType" Width="1.5" PointX="6.87429648585352" PointY="26.351566923014619" />
+        <EntityTypeShape EntityType="DataModel.vwMaterialPrice" Width="1.5" PointX="2.5653875314469392" PointY="2.0481332997084283" />
+        <EntityTypeShape EntityType="DataModel.vwMaterialTypes" Width="1.5" PointX="6.3840647295043169" PointY="12.354192739517519" />
+        <EntityTypeShape EntityType="DataModel.vwPlants" Width="1.5" PointX="5.5971651382731107" PointY="14.719793117940329" />
+        <EntityTypeShape EntityType="DataModel.vwProductHierarchy" Width="1.5" PointX="10.074007271823477" PointY="16.957886465339868" />
+        <EntityTypeShape EntityType="DataModel.vwQuantityUnit" Width="1.5" PointX="10.137338266771911" PointY="15.260440475894344" />
+        <EntityTypeShape EntityType="DataModel.vwRelativePeriods" Width="1.5" PointX="10.701222264534431" PointY="1.9098047921014041" />
+        <EntityTypeShape EntityType="DataModel.vwReportGroups" Width="1.5" PointX="10.95409442063146" PointY="31.707599222523903" />
+        <EntityTypeShape EntityType="DataModel.vwSalesValue" Width="1.5" PointX="11.786332033475084" PointY="10.165099133814266" />
+        <EntityTypeShape EntityType="DataModel.PivotLayouts" Width="1.5" PointX="4.5116004108039665" PointY="14.364511854185031" />
+        <EntityTypeShape EntityType="DataModel.PivotLayoutVariants" Width="1.5" PointX="10.207427405848833" PointY="30.143377452224204" />
+        <EntityTypeShape EntityType="DataModel.vwSalesOrganizations" Width="1.5" PointX="10.369560168296825" PointY="4.4677888473811507" />
+        <EntityTypeShape EntityType="DataModel.ReportComments" Width="1.5" PointX="6.6147942555205868" PointY="27.906518084884862" />
+        <EntityTypeShape EntityType="DataModel.UserReportMultipleSelections" Width="1.5" PointX="6.8559658335782432" PointY="28.024498684343182" />
+        <EntityTypeShape EntityType="DataModel.UserReportVariants" Width="1.5" PointX="11.722898086403916" PointY="18.235700973419334" />
+        <EntityTypeShape EntityType="DataModel.CurrentUserReportVariants" Width="1.5" PointX="8.8452233899595321" PointY="14.096618360884776" />
+        <EntityTypeShape EntityType="DataModel.ReportSelectionDefaultValues" Width="1.5" PointX="8.625" PointY="3.875" />
+        <EntityTypeShape EntityType="DataModel.vwMaterialGroups" Width="1.5" PointX="0.087303008924845132" PointY="5.4846242989807505" />
+        <EntityTypeShape EntityType="DataModel.vwProfitCenters" Width="1.5" PointX="9.5721684571225971" PointY="1.8374553331348371" />
+        <EntityTypeShape EntityType="DataModel.Reports" Width="1.5" PointX="1.125" PointY="11.875" />
+        <EntityTypeShape EntityType="DataModel.CurrentUserReportMultipleSelections" Width="1.5" PointX="1.0403631967680358" PointY="1.3018978989226269" />
+        <EntityTypeShape EntityType="DataModel.CurrentUserReportSelections" Width="1.5" PointX="3.0983621604267331" PointY="13.408031887099162" />
+        <EntityTypeShape EntityType="DataModel.UserReportSelections" Width="1.5" PointX="6.7823041709057534" PointY="13.732917494016196" />
+        <EntityTypeShape EntityType="DataModel.ReportStatistics" Width="1.5" PointX="9.7293403566485921" PointY="22.458336259451851" />
+        <EntityTypeShape EntityType="DataModel.vwProductionScheduler" Width="1.5" PointX="10.51302467217344" PointY="6.4214287430147774" />
+        <EntityTypeShape EntityType="DataModel.vwBrands" Width="1.5" PointX="9.9028340959469" PointY="19.249435925506724" />
+        <EntityTypeShape EntityType="DataModel.vwLogicalSystems" Width="1.5" PointX="9.9948558928421019" PointY="13.154399699137732" />
+        <EntityTypeShape EntityType="DataModel.vwSAPSystems" Width="1.5" PointX="6.8123939627839221" PointY="22.142985622465137" />
+        <EntityTypeShape EntityType="DataModel.UserSAPSystems" Width="1.5" PointX="11.0851220689179" PointY="9.4130212261402146" />
+        <EntityTypeShape EntityType="DataModel.vwUserSAPSystems" Width="1.5" PointX="0.12363255215977903" PointY="30.702191650263124" />
+        <EntityTypeShape EntityType="DataModel.vwWorkCenterGroups" Width="1.5" PointX="7.3990556371393872" PointY="27.503690747313058" />
+        <EntityTypeShape EntityType="DataModel.ReportsLinkedQuery" Width="1.5" PointX="6.8888708217483341" PointY="18.980293759601327" />
+        <EntityTypeShape EntityType="DataModel.vwBudgetVersions" Width="1.5" PointX="8.9281048667282352" PointY="14.085051036479442" />
+        <EntityTypeShape EntityType="DataModel.CurrentUsers" Width="1.5" PointX="3.7475456519739447" PointY="4.1041018534936482" />
+        <EntityTypeShape EntityType="DataModel.vwCurrentUser" Width="1.5" PointX="8.3783035447719989" PointY="3.6997800635638556" />
+        <EntityTypeShape EntityType="DataModel.UserGroups" Width="1.5" PointX="9.8518533771167753" PointY="23.593160431642627" />
+        <EntityTypeShape EntityType="DataModel.vwValuationClass" Width="1.5" PointX="4.2764416580444395" PointY="2.2899972509080531" />
+        <EntityTypeShape EntityType="DataModel.vwMRPControllers" Width="1.5" PointX="5.1038434380217659" PointY="30.107142149520637" />
+        <EntityTypeShape EntityType="DataModel.vwPurchasingGroups" Width="1.5" PointX="2.8566758943985571" PointY="29.922512515411952" />
+        <EntityTypeShape EntityType="DataModel.vwShowOptions" Width="1.5" PointX="2.8761132987570548" PointY="12.739401540131961" />
+        <EntityTypeShape EntityType="DataModel.vwShelfLifeTypes" Width="1.5" PointX="1.1891621338153082" PointY="21.045258889461522" />
+        <EntityTypeShape EntityType="DataModel.vwWarehouseNumbers" Width="1.5" PointX="0.92872757880423573" PointY="6.9699906739266542" />
+        <EntityTypeShape EntityType="DataModel.vwMaterialsIncluded" Width="1.5" PointX="1.9641215251591624" PointY="18.113087364525111" />
+        <EntityTypeShape EntityType="DataModel.vwStorageLocations" Width="1.5" PointX="6.032761151917633" PointY="4.8262731455388819" />
+        <EntityTypeShape EntityType="DataModel.RightClickMenu" Width="1.5" PointX="1.1823732839815193" PointY="0.19630354652009138" />
+        <EntityTypeShape EntityType="DataModel.ReportSelections" Width="1.5" PointX="6.5668902315976512" PointY="2.1937112669431191" />
+        <EntityTypeShape EntityType="DataModel.RfcConnection" Width="1.5" PointX="1.2403845364415946" PointY="29.902169628954571" />
+        <EntityTypeShape EntityType="DataModel.vwDistributionChannel" Width="1.5" PointX="11.18629373013335" PointY="15.298068038792382" />
+        <EntityTypeShape EntityType="DataModel.CurrentUserReportFields" Width="1.5" PointX="9.6877143782040633" PointY="21.926211933571011" />
+        <EntityTypeShape EntityType="DataModel.vwShowStocks" Width="1.5" PointX="11.496430009369007" PointY="15.205205417799393" />
+        <EntityTypeShape EntityType="DataModel.vwShowMD04Data" Width="1.5" PointX="11.644994856624397" PointY="19.146272549008145" />
+        <EntityTypeShape EntityType="DataModel.PPLockedOrders" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.ProductionPlanData" Width="1.5" PointX="14.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

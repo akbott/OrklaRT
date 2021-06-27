@@ -1,0 +1,12 @@
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\BPL.dll
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\BPL.pdb
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\obj\Debug\BPL.dll
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\obj\Debug\BPL.pdb
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\DAL.dll
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\SQLDataHandler.dll
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\SQLServerHandler.dll
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\DAL.pdb
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\SQLDataHandler.pdb
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\bin\Debug\SQLServerHandler.pdb
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\obj\Debug\Interop.ADODB.dll
+C:\TeamSource2012\RCCFIRE\SapExl\BPL\obj\Debug\BPL.csproj.ResolveComReference.cache

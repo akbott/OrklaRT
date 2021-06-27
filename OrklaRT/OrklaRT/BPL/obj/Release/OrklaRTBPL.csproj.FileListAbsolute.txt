@@ -1,0 +1,3 @@
+C:\OrklaRT\OrklaRT\BPL\obj\Release\Interop.ADODB.dll
+C:\OrklaRT\OrklaRT\BPL\obj\Release\OrklaRTBPL.csproj.ResolveComReference.cache
+C:\OrklaRT\OrklaRT\BPL\obj\Release\OrklaRTBPL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="SAPExlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BDCInput" EntityType="DataModel.BDCInput" />
+    <EntitySet Name="ExchangeRates" EntityType="DataModel.ExchangeRates" />
+    <EntitySet Name="ReportGroups" EntityType="DataModel.ReportGroups" />
+    <EntitySet Name="ReportOptions" EntityType="DataModel.ReportOptions" />
+    <EntitySet Name="ReportSheetOptions" EntityType="DataModel.ReportSheetOptions" />
+    <EntitySet Name="RighClickMenuFields" EntityType="DataModel.RighClickMenuFields" />
+    <EntitySet Name="RightClickSubMenu" EntityType="DataModel.RightClickSubMenu" />
+    <EntitySet Name="Views" EntityType="DataModel.Views" />
+    <EntitySet Name="vwCompanyCodes" EntityType="DataModel.vwCompanyCodes" />
+    <EntitySet Name="vwCurrency" EntityType="DataModel.vwCurrency" />
+    <EntitySet Name="vwCustomerHierarchy" EntityType="DataModel.vwCustomerHierarchy" />
+    <EntitySet Name="vwDayType" EntityType="DataModel.vwDayType" />
+    <EntitySet Name="vwMaterialPrice" EntityType="DataModel.vwMaterialPrice" />
+    <EntitySet Name="vwMaterialTypes" EntityType="DataModel.vwMaterialTypes" />
+    <EntitySet Name="vwPlants" EntityType="DataModel.vwPlants" />
+    <EntitySet Name="vwProductHierarchy" EntityType="DataModel.vwProductHierarchy" />
+    <EntitySet Name="vwQuantityUnit" EntityType="DataModel.vwQuantityUnit" />
+    <EntitySet Name="vwRelativePeriods" EntityType="DataModel.vwRelativePeriods" />
+    <EntitySet Name="vwReportGroups" EntityType="DataModel.vwReportGroups" />
+    <EntitySet Name="vwSalesValue" EntityType="DataModel.vwSalesValue" />
+    <EntitySet Name="PivotLayouts" EntityType="DataModel.PivotLayouts" />
+    <EntitySet Name="PivotLayoutVariants" EntityType="DataModel.PivotLayoutVariants" />
+    <EntitySet Name="vwSalesOrganizations" EntityType="DataModel.vwSalesOrganizations" />
+    <EntitySet Name="ReportComments" EntityType="DataModel.ReportComments" />
+    <EntitySet Name="UserReportMultipleSelections" EntityType="DataModel.UserReportMultipleSelections" />
+    <EntitySet Name="UserReportVariants" EntityType="DataModel.UserReportVariants" />
+    <EntitySet Name="CurrentUserReportVariants" EntityType="DataModel.CurrentUserReportVariants" />
+    <EntitySet Name="ReportSelectionDefaultValues" EntityType="DataModel.ReportSelectionDefaultValues" />
+    <EntitySet Name="vwMaterialGroups" EntityType="DataModel.vwMaterialGroups" />
+    <EntitySet Name="vwProfitCenters" EntityType="DataModel.vwProfitCenters" />
+    <EntitySet Name="Reports" EntityType="DataModel.Reports" />
+    <EntitySet Name="CurrentUserReportMultipleSelections" EntityType="DataModel.CurrentUserReportMultipleSelections" />
+    <EntitySet Name="CurrentUserReportSelections" EntityType="DataModel.CurrentUserReportSelections" />
+    <EntitySet Name="UserReportSelections" EntityType="DataModel.UserReportSelections" />
+    <EntitySet Name="ReportStatistics" EntityType="DataModel.ReportStatistics" />
+    <EntitySet Name="vwProductionScheduler" EntityType="DataModel.vwProductionScheduler" />
+    <EntitySet Name="vwBrands" EntityType="DataModel.vwBrands" />
+    <EntitySet Name="vwLogicalSystems" EntityType="DataModel.vwLogicalSystems" />
+    <EntitySet Name="vwSAPSystems" EntityType="DataModel.vwSAPSystems" />
+    <EntitySet Name="UserSAPSystems" EntityType="DataModel.UserSAPSystems" />
+    <EntitySet Name="vwUserSAPSystems" EntityType="DataModel.vwUserSAPSystems" />
+    <EntitySet Name="vwWorkCenterGroups" EntityType="DataModel.vwWorkCenterGroups" />
+    <EntitySet Name="ReportsLinkedQuery" EntityType="DataModel.ReportsLinkedQuery" />
+    <EntitySet Name="vwBudgetVersions" EntityType="DataModel.vwBudgetVersions" />
+    <EntitySet Name="CurrentUsers" EntityType="DataModel.CurrentUsers" />
+    <EntitySet Name="vwCurrentUser" EntityType="DataModel.vwCurrentUser" />
+    <EntitySet Name="UserGroups" EntityType="DataModel.UserGroups" />
+    <EntitySet Name="vwValuationClass" EntityType="DataModel.vwValuationClass" />
+    <EntitySet Name="vwMRPControllers" EntityType="DataModel.vwMRPControllers" />
+    <EntitySet Name="vwPurchasingGroups" EntityType="DataModel.vwPurchasingGroups" />
+    <EntitySet Name="vwShowOptions" EntityType="DataModel.vwShowOptions" />
+    <EntitySet Name="vwShelfLifeTypes" EntityType="DataModel.vwShelfLifeTypes" />
+    <EntitySet Name="vwWarehouseNumbers" EntityType="DataModel.vwWarehouseNumbers" />
+    <EntitySet Name="vwMaterialsIncluded" EntityType="DataModel.vwMaterialsIncluded" />
+    <EntitySet Name="vwStorageLocations" EntityType="DataModel.vwStorageLocations" />
+    <EntitySet Name="RightClickMenu" EntityType="DataModel.RightClickMenu" />
+    <EntitySet Name="ReportSelections" EntityType="DataModel.ReportSelections" />
+    <EntitySet Name="RfcConnection" EntityType="DataModel.RfcConnection" />
+    <EntitySet Name="vwDistributionChannel" EntityType="DataModel.vwDistributionChannel" />
+    <EntitySet Name="CurrentUserReportFields" EntityType="DataModel.CurrentUserReportFields" />
+    <EntitySet Name="vwShowStocks" EntityType="DataModel.vwShowStocks" />
+    <EntitySet Name="vwShowMD04Data" EntityType="DataModel.vwShowMD04Data" />
+    <EntitySet Name="PPLockedOrders" EntityType="DataModel.PPLockedOrders" />
+    <EntitySet Name="ProductionPlanData" EntityType="DataModel.ProductionPlanData" />
+  </EntityContainer>
+  <EntityType Name="BDCInput">
+    <Key>
+      <PropertyRef Name="BCDInputSeq" />
+    </Key>
+    <Property Type="Int32" Name="BCDInputSeq" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Program" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Dynpro" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ID" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FieldName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FieldValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ScreenInput" />
+    <Property Type="String" Name="TransactionCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ValueFieldName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ReportID" />
+  </EntityType>
+  <EntityType Name="ExchangeRates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FromCurrency" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExchangeRateType" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ToCurrency" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ValidFrom" Nullable="false" Precision="0" />
+    <Property Type="Double" Name="ExchangeRate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportSubGroupID" Nullable="false" />
+    <Property Type="String" Name="ReportSubGroupName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ReportGroup" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FormatGraph" />
+      <PropertyRef Name="SaveGroup" />
+      <PropertyRef Name="SaveBinTest" />
+      <PropertyRef Name="SaveExcludedTypes" />
+      <PropertyRef Name="UpdateSAP" />
+      <PropertyRef Name="ShowOptions" />
+      <PropertyRef Name="ShelfLifeTypes" />
+      <PropertyRef Name="MaterialsIncluded" />
+      <PropertyRef Name="SaveList" />
+      <PropertyRef Name="SaveManko" />
+      <PropertyRef Name="ShowStocks" />
+      <PropertyRef Name="ShowMD04Data" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Boolean" Name="MaterialPrice" Nullable="false" />
+    <Property Type="Boolean" Name="ProductHierarchy" Nullable="false" />
+    <Property Type="Boolean" Name="CustomerHierarchy" Nullable="false" />
+    <Property Type="Boolean" Name="SalesValue" Nullable="false" />
+    <Property Type="Boolean" Name="QuantityUnit" Nullable="false" />
+    <Property Type="Boolean" Name="Currency" Nullable="false" />
+    <Property Type="Boolean" Name="CurrencyYear" Nullable="false" />
+    <Property Type="Boolean" Name="CreateNewPlan" Nullable="false" />
+    <Property Type="Boolean" Name="SavePriorities" Nullable="false" />
+    <Property Type="Boolean" Name="BudgetVersion" Nullable="false" />
+    <Property Type="Boolean" Name="FormatGraph" Nullable="false" />
+    <Property Type="Boolean" Name="SaveGroup" Nullable="false" />
+    <Property Type="Boolean" Name="SaveBinTest" Nullable="false" />
+    <Property Type="Boolean" Name="SaveExcludedTypes" Nullable="false" />
+    <Property Type="Boolean" Name="UpdateSAP" Nullable="false" />
+    <Property Type="Boolean" Name="ShowOptions" Nullable="false" />
+    <Property Type="Boolean" Name="ShelfLifeTypes" Nullable="false" />
+    <Property Type="Boolean" Name="MaterialsIncluded" Nullable="false" />
+    <Property Type="Boolean" Name="SaveList" Nullable="false" />
+    <Property Type="Boolean" Name="SaveManko" Nullable="false" />
+    <Property Type="Boolean" Name="ShowStocks" Nullable="false" />
+    <Property Type="Boolean" Name="ShowMD04Data" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportSheetOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="ReportSheet" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="MaterialPrice" Nullable="false" />
+    <Property Type="Boolean" Name="ProductHierarchy" Nullable="false" />
+    <Property Type="Boolean" Name="CustomerHierarchy" Nullable="false" />
+    <Property Type="Boolean" Name="SalesValue" Nullable="false" />
+    <Property Type="Boolean" Name="QuantityUnit" Nullable="false" />
+    <Property Type="Boolean" Name="Currency" Nullable="false" />
+    <Property Type="Boolean" Name="CurrencyYear" Nullable="false" />
+    <Property Type="Boolean" Name="CreateNewPlan" Nullable="false" />
+    <Property Type="Boolean" Name="SavePriorities" Nullable="false" />
+    <Property Type="Boolean" Name="BudgetVersion" Nullable="false" />
+    <Property Type="Boolean" Name="FormatGraph" Nullable="false" />
+    <Property Type="Boolean" Name="SaveGroup" Nullable="false" />
+    <Property Type="Boolean" Name="SaveBinTest" Nullable="false" />
+    <Property Type="Boolean" Name="SaveExcludedTypes" Nullable="false" />
+    <Property Type="Boolean" Name="UpdateSAP" Nullable="false" />
+    <Property Type="Boolean" Name="ShowOptions" Nullable="false" />
+    <Property Type="Boolean" Name="ShelfLifeTypes" Nullable="false" />
+    <Property Type="Boolean" Name="MaterialsIncluded" Nullable="false" />
+    <Property Type="Boolean" Name="SaveList" Nullable="false" />
+    <Property Type="Boolean" Name="SaveManko" Nullable="false" />
+    <Property Type="Boolean" Name="ShowStocks" Nullable="false" />
+    <Property Type="Boolean" Name="ShowMD04Data" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RighClickMenuFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RightClickMenuID" Nullable="false" />
+    <Property Type="String" Name="FieldName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FieldValue" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RightClickSubMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RightClickMenuID" Nullable="false" />
+    <Property Type="String" Name="Caption" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FunctionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="BeginGroup" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Views">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="ViewID" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ViewID" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FilterField" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Language" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwCompanyCodes">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwCurrency">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwCustomerHierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwDayType">
+    <Key>
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="Int32" Name="ID" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwMaterialPrice">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwMaterialTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwPlants">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwProductHierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwQuantityUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwRelativePeriods">
+    <Key>
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="Int32" Name="ID" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwReportGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwSalesValue">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PivotLayouts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="VariantID" Nullable="false" />
+    <Property Type="String" Name="PivotLayout" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PivotLayoutVariants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="VariantName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VariantDescription" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwSalesOrganizations">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReportComments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="CommentID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comment" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date1" Precision="0" />
+    <Property Type="String" Name="ModifiedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="UserReportMultipleSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="VariantID" Nullable="false" />
+    <Property Type="String" Name="ScreenID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LowValue" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserReportVariants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="VariantName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VariantDescription" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportVariants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="VariantID" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportSelectionDefaultValues">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="ScreenID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sign" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LowValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HighValue" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwMaterialGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwProfitCenters">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Reports">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="ReportName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ReportGroup" Nullable="false" />
+    <Property Type="Binary" Name="ReportDefinition" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="BeginGroup" Nullable="false" />
+    <Property Type="String" Name="QueryName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Week" Nullable="false" />
+    <Property Type="Boolean" Name="Month" Nullable="false" />
+    <Property Type="Boolean" Name="Year" Nullable="false" />
+    <Property Type="Boolean" Name="MultipleSelection" Nullable="false" />
+    <Property Type="Boolean" Name="MaterialHelp" Nullable="false" />
+    <Property Type="Boolean" Name="ReportOptions" Nullable="false" />
+    <Property Type="Boolean" Name="Enabled" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportMultipleSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="VariantID" Nullable="false" />
+    <Property Type="String" Name="ScreenID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LowValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ComboBox" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="VariantID" Nullable="false" />
+    <Property Type="String" Name="ScreenID" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Kind" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sign" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SelectionOption" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LowValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HighValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="MultipleSelection" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserReportSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="VariantID" Nullable="false" />
+    <Property Type="String" Name="ScreenID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Kind" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sign" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SelectionOption" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LowValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HighValue" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="MultipleSelection" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportStatistics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="ReportCount" Nullable="false" />
+    <Property Type="DateTime" Name="LastOpened" Precision="3" />
+  </EntityType>
+  <EntityType Name="vwProductionScheduler">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FilterField" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwBrands">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwLogicalSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwSAPSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserSAPSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="SAPSystem" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SAPUserName" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SAPPassword" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwUserSAPSystems">
+    <Key>
+      <PropertyRef Name="SAPSystem" />
+      <PropertyRef Name="SAPUserName" />
+      <PropertyRef Name="SAPPassword" />
+    </Key>
+    <Property Type="String" Name="SAPSystem" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SAPUserName" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SAPPassword" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwWorkCenterGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReportsLinkedQuery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="SubReports" Nullable="false" />
+    <Property Type="String" Name="SheetName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ListObjectName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="QueryName" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwBudgetVersions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CurrentUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastLoggedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UserGroup" />
+    <Property Type="String" Name="SAPSystem" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DecimalSeparator" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ThousandSeparator" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DateFormat" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Language" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductionPlant" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BwHana" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwCurrentUser">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LastLoggedOn" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastLoggedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UserGroup" />
+    <Property Type="String" Name="SAPSystem" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DecimalSeparator" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ThousandSeparator" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DateFormat" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Language" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductionPlant" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BwHana" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserGroupID" Nullable="false" />
+    <Property Type="String" Name="UserGroupName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwValuationClass">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwMRPControllers">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FilterField" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwPurchasingGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwShowOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwShelfLifeTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwWarehouseNumbers">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwMaterialsIncluded">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwStorageLocations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RightClickMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MenuID" Nullable="false" />
+    <Property Type="String" Name="Caption" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FunctionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReportSelections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="String" Name="FieldName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ScreenID" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SelectionOption" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ControlType" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SortOrder" />
+    <Property Type="Int32" Name="Mandatory" />
+    <Property Type="Boolean" Name="MultipleSelection" Nullable="false" />
+    <Property Type="String" Name="Sign" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LowValue" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HighValue" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DayType" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Period" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DateLimit" Nullable="false" />
+    <Property Type="Boolean" Name="Required" Nullable="false" />
+    <Property Type="Int32" Name="MaxDateLimit" Nullable="false" />
+    <Property Type="Boolean" Name="Include" Nullable="false" />
+    <Property Type="Boolean" Name="LowValueVisible" Nullable="false" />
+    <Property Type="Boolean" Name="HighValueVisible" Nullable="false" />
+    <Property Type="Boolean" Name="UpdateLowValue" Nullable="false" />
+    <Property Type="Boolean" Name="UpdateHighValue" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RfcConnection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Client" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Language" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HostServer" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SysNr" Nullable="false" />
+    <Property Type="String" Name="IdleTimeout" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UseSAPGui" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwDistributionChannel">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+      <PropertyRef Name="CombinedText" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CombinedText" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CurrentUserReportFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="ReportId" />
+    <Property Type="String" Name="Plant" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Material" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MaterialType" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Year" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LanguageKey" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderNumber" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SalesOrganisation" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PurchasingDocumnet" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SalesOrder" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Delivery" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwShowStocks">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwShowMD04Data">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Text" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PPLockedOrders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Plant" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNumber" Type="Int32" />
+    <Property Name="LockedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductionPlanData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="PlanTime" Type="DateTime" Precision="3" />
+    <Property Name="Order" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ConfirmedOrderFinishDate1" Type="DateTime" Precision="0" />
+    <Property Name="ActualFinishDate" Type="DateTime" Precision="0" />
+    <Property Name="ScheduledFinishDate" Type="DateTime" Precision="0" />
+    <Property Name="ScheduledFinishTime" Type="Time" Precision="7" />
+    <Property Name="ActualStartDate" Type="DateTime" Precision="0" />
+    <Property Name="ScheduledStartDate" Type="DateTime" Precision="0" />
+    <Property Name="ScheduledStartTime" Type="Time" Precision="7" />
+    <Property Name="ActualFinishExecutionDate" Type="DateTime" Precision="0" />
+    <Property Name="ActualStartExecutionDate" Type="DateTime" Precision="0" />
+    <Property Name="DeliveryCompletedIndicator" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNumber" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EarliestScheduledStartDate" Type="DateTime" Precision="0" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MixMaterialDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LogicalSystem" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PlantDescription" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DeletionFlag" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="OrderPriority" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ItemCategory" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="WorkCenterDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Counter" Type="Int32" />
+    <Property Name="ResourceObjectID" Type="Int64" />
+    <Property Name="Temp" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EarliestScheduledStartTime" Type="Time" Precision="7" />
+    <Property Name="ConfirmedOrderFinishDate" Type="DateTime" Precision="0" />
+    <Property Name="ConfirmedOrderFinishTime" Type="Time" Precision="7" />
+    <Property Name="ActualStartTime" Type="Time" Precision="7" />
+    <Property Name="ActualStartExecutionTime" Type="Time" Precision="7" />
+    <Property Name="ActualFinishTime" Type="Time" Precision="7" />
+    <Property Name="CapacityID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IndicatorPhase" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="LatestScheduledStartDate" Type="DateTime" Precision="0" />
+    <Property Name="LatestScheduledStartTime" Type="Time" Precision="7" />
+    <Property Name="ControlKey" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Temp1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MixUnit" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LanguageCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MixMaterial" Type="Int64" Nullable="false" />
+    <Property Name="Plant" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="WorkCenter" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialNumber" Type="Int64" Nullable="false" />
+    <Property Name="BaseQuantity" Type="Double" />
+    <Property Name="RequiredMixingQuantity" Type="Double" />
+    <Property Name="ConfirmedScrap" Type="Int32" />
+    <Property Name="ConfirmedYield" Type="Int32" />
+    <Property Name="ConfirmedYield1" Type="Int32" />
+    <Property Name="QuantityOfGoodsReceived" Type="Int32" />
+    <Property Name="ProcessingTime" Type="Double" />
+    <Property Name="ScrapQuantity" Type="Int32" />
+    <Property Name="TotalOrderQuantity" Type="Double" Nullable="false" />
+    <Property Name="TotalScrapQuantity" Type="Int32" Nullable="false" />
+    <Property Name="SetupTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OperationQuantity" Type="Double" />
+    <Property Name="ConfirmedQuantityYield" Type="Int32" />
+    <Property Name="TotalStock" Type="Double" />
+    <Property Name="QuantityWithdrawn" Type="Double" />
+    <Property Name="SetupTid" Type="Double" />
+    <Property Name="ProcTid" Type="Double" />
+    <Property Name="CMaterialName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CRemainingQuantity" Type="Double" />
+    <Property Name="CRtTotal" Type="Double" />
+    <Property Name="CSetup" Type="Double" />
+    <Property Name="CRemainingTime" Type="Double" />
+    <Property Name="CSequence" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CStartDateH" Type="DateTime" Precision="0" />
+    <Property Name="CStartTimeH" Type="Time" Precision="7" />
+    <Property Name="CActive" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CEndDate" Type="DateTime" Precision="0" />
+    <Property Name="CEndTime" Type="Time" Precision="7" />
+    <Property Name="CStart" Type="DateTime" Precision="3" />
+    <Property Name="CStop" Type="DateTime" Precision="3" />
+    <Property Name="CStartSec" Type="Time" Precision="7" />
+    <Property Name="CWorkCenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CStopSec" Type="Time" Precision="7" />
+    <Property Name="CAccCap" Type="Double" />
+    <Property Name="CStartCap" Type="Double" />
+    <Property Name="CAccCap1" Type="Double" />
+    <Property Name="CStartValue" Type="Double" />
+    <Property Name="CProdValue" Type="Double" />
+    <Property Name="CNowValue" Type="Double" />
+    <Property Name="CTotalValue" Type="Double" />
+    <Property Name="CAktHelp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CAccAkt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CAccStarted" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CLocked" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CCapToday" Type="Double" />
+    <Property Name="CLeftNow" Type="Double" />
+    <Property Name="CCapStart" Type="DateTime" Precision="3" />
+    <Property Name="CMixStatus" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CHelp2" Type="Double" />
+    <Property Name="CHelp3" Type="Double" />
+    <Property Name="CStartDate" Type="DateTime" Precision="0" />
+    <Property Name="CStartTime" Type="Time" Precision="7" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,11 @@
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.vbprojResolveAssemblyReference.cache
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\Interop.ADODB.dll
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.vbproj.ResolveComReference.cache
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.MixingStart.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.PivotComments.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.PivotLayoutVariant.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.SAPLogin.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.OrklaRT.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.Selection.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.Resources.resources
+C:\OrklaRT\OrklaRT\OrklaRT\obj\Release\OrklaRT.vbproj.GenerateResource.Cache

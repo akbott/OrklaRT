@@ -1,0 +1,116 @@
+﻿<UserControl x:Name="ucrSelection" x:Class="SelectionPane.Selection"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
+             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height ="Auto" Width="465" >
+    <Grid>
+        <TabControl Name="tbcSelection" SelectionChanged="tbcSelection_SelectionChanged">
+            <TabItem Header="Utvalg" Name="tbiSelection" >
+                <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="None" Width="450" >
+                    <Grid>
+                        <Expander Name="expVariants"  HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Expanded="expVariants_Expanded" Collapsed="expVariants_Collapsed">
+                            <GroupBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="450">
+                                <Grid Background="#FFE5E5E5" Margin="0,5,0,0" Name="grdVariants">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="319*"/>
+                                        <ColumnDefinition Width="119*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Name="lblVariantName" Content="Variant Navn" Height="25" Width="110" Margin="10,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                    <TextBox Name="txtVariantName" Height="22" Width="200" Margin="120,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                                    <Label Name="lblDescription" Content="Variant Beskrivelse" Height="25" Width="110" Margin="10,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                    <TextBox Name="txtDescription" Height="22" Width="200" Margin="120,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                                    <Button Name="btnOK" Content="Lagre" Height="22" Width="55" Margin="150,65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnOK_Click"  />
+                                    <Button Name="btnCancel" Content="kansellere" Height="22" Width="60" Margin="210,65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnCancel_Click"  />
+                                    <!--<Button Name="btnNew1" Content="New1" Height="22" Width="50" Margin="270,65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnNew1_Click"  />-->
+                                </Grid>
+                            </GroupBox>
+                        </Expander>
+                        <Button Name="btnRun" Content="kjøre(F8)" Height="22" Width="51" Margin="25,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnRun_Click" />
+                        <ComboBox Name="cboSelectionVariant" SelectedValuePath="ID" DisplayMemberPath="VariantName" IsEditable="True" IsTextSearchEnabled="True" Height="22" Width="200" Margin="80,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="cboSelectionVariant_SelectionChanged" />
+                        <Button Name="btnSaveSelection" Content="Lagre Variant" Height="22" Width="75" Margin="290,0,0,486" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="btnSaveSelection_Click" />
+                        <Button Name="btnDeleteSelection" ToolTip="Delete" Height="22" Width="20" Margin="375,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnDeleteSelection_Click" >
+                            <Image Source="Delete.jpg" Stretch="Fill" ></Image>
+                        </Button>
+                        <Label Name="lblMessage"  Content="" Margin="0,25,0,0" Visibility="Hidden" ></Label>
+                        <Button Name="btnYes" Content="Yes" Height="22" Width="50" Margin="165,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" Click="btnYes_Click"/>
+                        <Button Name="btnNew" Content="New" Height="22" Width="50" Margin="220,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" Click="btnNew_Click"/>
+                        <Button Name="btnCancel1" Content="Canel" Height="22" Width="50" Margin="275,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" Click="btnCancel1_Click"/>
+                        <!--<Expander Header="Date Options" Name="expDateOptions" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Expanded="expDateOptions_Expanded" Collapsed="expDateOptions_Collapsed">
+                        <GroupBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="350">
+                            <Grid Background="#FFE5E5E5" Margin="0,5,0,0" Name="grdDateOptions">
+                                <CheckBox Name="chkUseStandard" Content="Use standard" Height="20" Width="100" Margin="10,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="chkUseStandard_Checked" />
+                                <CheckBox Name="chkIncludeSamePeriodLastYear" Content="Include same period last year" Height="20" Width="200" Margin="120,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <Label Name="lblRelativePeriods" Content="Relative periods" Height="25" Width="100" Margin="10,25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <ComboBox Name="cboRelativePeriods" SelectedValuePath="ID" DisplayMemberPath="Text" IsEditable="True" IsTextSearchEnabled="True" Height="20" Width="120" Margin="120,25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <Label Name="lblRollingDays" Content="Rolling days" Height="25" Width="100" Margin="10,25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <TextBox Name="txtRollingDays" Height="20" Width="30" Margin="120,25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="txtRollingDays_TextChanged" />
+                                <Label Name="lblDayType" Content="Day type" Height="25" Width="100" Margin="10,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <ComboBox Name="cboDayType" SelectedValuePath="ID" DisplayMemberPath="Text" IsEditable="True" IsTextSearchEnabled="True" Height="20" Width="100" Margin="120,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="cboDayType_SelectionChanged"/>
+                            </Grid>
+                        </GroupBox>
+                    </Expander>-->
+
+                        <GroupBox Header="Enkel dato selection" Name="grpEasyDateSelection" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="450">
+                            <Grid Background="#FFE5E5E5" Name="grdEasyDateSelection">
+                                <Label Name="lblWeek" Content="Uke:" Height="25" Width="50" Margin="10,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <TextBox Name="txtWeek" Height="20" Width="25" Margin="50,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="txtWeek_TextChanged" />
+                                <Label Name="lblMonth" Content="Måned:" Height="25" Width="50" Margin="81,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <TextBox Name="txtMonth" Height="20" ToolTip="MM" Width="25" Margin="130,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="txtMonth_TextChanged" />
+                                <Label Name="lblYear" Content="År:" Height="25" Width="25" Margin="158,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <TextBox Name="txtYear" Height="20" ToolTip="YYYY" Width="35" Margin="190,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="txtYear_TextChanged"  />
+                            </Grid>
+                        </GroupBox>
+                        <Label Name="lblWarning"  Content="" Margin="0,130,0,0" Visibility="Visible" ></Label>
+                        <!--<GroupBox Header="Material søk etter hjelp" Name="grpMaterialSearch" HorizontalAlignment="Left" Margin="0,170,0,0" VerticalAlignment="Top" Width="450" Visibility="Hidden" >
+                            <Grid Background="#FFE5E5E5" Name="grdMaterialSearch">
+                                <Label Name="lblPlant" Content="Fabrikk:" Height="25" Width="50" Margin="10,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <ComboBox Name="cboPlants" Height="20" Width="75" Margin="65,10,0,0" SelectedValuePath="ID" DisplayMemberPath="ID" IsTextSearchEnabled="True" IsEditable="True"  HorizontalContentAlignment="Left"   HorizontalAlignment="Left" VerticalAlignment="Top"  />
+                                <Label Name="lblMaterialType" Content="Material Type:" Height="25" Width="85" Margin="150,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <ComboBox Name="cboMaterialTypes" Height="20" Width="75" Margin="240,10,0,0" SelectedValuePath="ID" DisplayMemberPath="ID" IsTextSearchEnabled="True" IsEditable="True" HorizontalContentAlignment ="Left" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Button Name="btnRefresh" ToolTip="Refresh" Height="22" Width="75" Margin="325,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Refresh" Click="btnRefresh_Click" ></Button>
+                            </Grid>
+                        </GroupBox>-->
+                        <GroupBox Header="Selection" Name="grpSelection" HorizontalAlignment="Left" Margin="0,170,0,0" VerticalAlignment="Top" Width="450">
+                            <Grid Background="#FFE5E5E5" Name="grdSelection">
+                                <Label Name="lblName1" Height="25" Width="200" Margin="5,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName2" Height="25" Width="200" Margin="5,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName3" Height="25" Width="200" Margin="5,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName4" Height="25" Width="200" Margin="5,85,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <Label Name="lblName5" Height="25" Width="200" Margin="5,110,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName6" Height="25" Width="200" Margin="5,135,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName7" Height="25" Width="200" Margin="5,160,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName8" Height="25" Width="200" Margin="5,185,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName9" Height="25" Width="200" Margin="5,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label Name="lblName10" Height="25" Width="200" Margin="5,235,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </Viewbox>
+            </TabItem>
+            <TabItem Header="Multippel Utvalg" Name="tbiMultipleSelectionOptions" Visibility="Hidden">
+                <Grid Background="#FFE5E5E5">
+                    <Button Name="btnPaste" Content="Lim inn" Height="22" Width="50" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnPaste_Click" />
+                    <Button Name="btnDelete" Content="Slett" Height="22" Width="50" Margin="55,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnDelete_Click"  />
+                    <Label Name="lblScreenID" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"/>
+                    <DataGrid Name="dgSelectSingleValues" Margin="0,25,0,0" AutoGenerateColumns="False" RowHeaderWidth="20"  RowHeight="23" CanUserAddRows="True" CanUserDeleteRows="True" HorizontalAlignment="Left" VerticalAlignment="Top" CellEditEnding="dgSelectSingleValues_CellEditEnding" PreviewKeyDown="dgSelectSingleValues_PreviewKeyDown"  >
+                        <!--<DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=ID}" Visibility="Hidden" />
+                        <DataGridTextColumn Header="Single value" Binding="{Binding Path=LowValue}" Width="150" />
+                    </DataGrid.Columns>-->
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=ID}" Visibility="Hidden" />
+                            <!--<DataGridComboBoxColumn x:Name="cboSingleValues" Header="Single value"  SelectedValueBinding="{Binding Path=LowValue}" SelectedValuePath="ID" DisplayMemberPath="CombinedText">
+                                <DataGridComboBoxColumn.EditingElementStyle>
+                                    <Style TargetType="ComboBox" >
+                                        <Setter Property="IsEditable" Value="True" />
+                                    </Style>
+                                </DataGridComboBoxColumn.EditingElementStyle>
+                            </DataGridComboBoxColumn>-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SapExl
+</name>
+</assembly>
+<members>
+<member name="M:SapExl.ThisAddIn.#ctor(Microsoft.Office.Tools.Excel.ApplicationFactory,System.IServiceProvider)">
+</member><member name="M:SapExl.ThisAddIn.Initialize">
+</member><member name="M:SapExl.ThisAddIn.FinishInitialization">
+</member><member name="M:SapExl.ThisAddIn.InitializeDataBindings">
+</member><member name="M:SapExl.ThisAddIn.InitializeCachedData">
+</member><member name="M:SapExl.ThisAddIn.InitializeData">
+</member><member name="M:SapExl.ThisAddIn.BindToData">
+</member><member name="M:SapExl.ThisAddIn.StartCaching(System.String)">
+</member><member name="M:SapExl.ThisAddIn.StopCaching(System.String)">
+</member><member name="M:SapExl.ThisAddIn.IsCached(System.String)">
+</member><member name="M:SapExl.ThisAddIn.BeginInitialization">
+</member><member name="M:SapExl.ThisAddIn.EndInitialization">
+</member><member name="M:SapExl.ThisAddIn.InitializeControls">
+</member><member name="M:SapExl.ThisAddIn.InitializeComponents">
+</member><member name="M:SapExl.ThisAddIn.NeedsFill(System.String)">
+</member><member name="M:SapExl.ThisAddIn.OnShutdown">
+</member><member name="T:SapExl.ThisAddIn">
+</member><member name="M:SapExl.Globals.#ctor">
+</member><member name="T:SapExl.Globals">
+</member><member name="M:SapExl.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+</member><member name="T:SapExl.ThisRibbonCollection">
+</member><member name="P:SapExl.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SapExl.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:SapExl.My.Resources.Resources.Password">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SapExl.My.Resources.Resources.Report">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SapExl.My.Resources.Resources.User">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:SapExl.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
